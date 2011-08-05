@@ -1,2 +1,5 @@
+*.swp
 /_site/*
 /bin/*
+/.sass-cache/*
+/css/.sass-cache/*

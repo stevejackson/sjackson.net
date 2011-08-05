@@ -8,6 +8,17 @@
   width: 900px;
   margin: 0 auto; }
 
+.navsub {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0; }
+  .navsub li {
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer; }
+
 #nav {
   position: absolute;
   right: 0px;
@@ -33,7 +44,8 @@
         color: white; }
 
 a {
-  color: #ea0000; }
+  color: #ea0000;
+  text-decoration: none; }
 
 a:hover {
   text-decoration: underline; }

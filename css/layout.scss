@@ -13,6 +13,20 @@ $site-width: 900px;
 	margin: 0 auto;
 }
 
+.navsub {
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	
+	li {
+		display: block;
+		overflow: hidden;
+		padding: 0;
+		cursor: pointer;
+	}
+}
+
 #nav {
 	position: absolute;
 	right: 0px;
@@ -48,6 +62,7 @@ $site-width: 900px;
 
 a {
 	color: $theme-color;
+	text-decoration: none;
 }
 
 a:hover {
