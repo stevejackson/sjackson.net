@@ -1,36 +1,66 @@
+#top-bar {
+  width: 100%;
+  height: 9px;
+  background: #ea0000; }
+
+#wrapper {
+  position: relative;
+  width: 900px;
+  margin: 0 auto; }
+
 #nav {
-  background: black;
-  width: 400px;
-  height: 20px; }
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block; }
+  #nav ul {
+    width: 100%;
+    list-style: none;
+    display: block; }
+    #nav ul li {
+      float: left;
+      margin-left: 3px;
+      margin-left: 5px;
+      padding: 8px 15px 8px 15px;
+      background: #ea0000;
+      color: white; }
+      #nav ul li:hover {
+        background: #ff3838; }
+      #nav ul li a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white; }
 
 a {
-  color: #03f; }
+  color: #ea0000; }
 
 a:hover {
-  color: #69f; }
+  text-decoration: underline; }
 
-/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {
-  background: #fcd700;
+  background: #ea0000;
   color: #fff;
   text-shadow: none; }
 
 ::selection {
-  background: #fcd700;
+  background: #ea0000;
   color: #fff;
   text-shadow: none; }
 
-/*	j.mp/webkit-tap-highlight-color */
 a:link {
-  -webkit-tap-highlight-color: #fcd700; }
+  -webkit-tap-highlight-color: #ea0000; }
 
 ins {
-  background-color: #fcd700;
+  background-color: #ea0000;
   color: #000;
   text-decoration: none; }
 
 mark {
-  background-color: #fcd700;
+  background-color: #ea0000;
   color: #000;
   font-style: italic;
   font-weight: bold; }
+
+.clear {
+  clear: both; }
