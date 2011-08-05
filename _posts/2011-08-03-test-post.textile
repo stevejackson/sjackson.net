@@ -1,0 +1,10 @@
+---
+layout: post
+title: Lorem Ipsum
+---
+
+h1. {{ page.title }}
+
+p(meta). 3 Nov 2008 - San Francisco
+
+I'm testing some text here.
