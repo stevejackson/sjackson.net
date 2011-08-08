@@ -1,5 +1,6 @@
 body {
-  background: url("/img/bg.png") repeat-x repeat-y; }
+  background-image: url("/img/bg2.png");
+  background-repeat: repeat-x repeat-y; }
 
 #top-bar {
   width: 100%;
@@ -30,6 +31,24 @@ header {
       color: black; }
       header .right-split h1 a:hover {
         color: #cd0a0a; }
+
+#box {
+  float: right;
+  width: 50px;
+  height: 50px;
+  background: #cd0a0a; }
+  #box span {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-top: 15px; }
+
+.opaque {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: .5; }
 
 .navwrap {
   position: absolute;
