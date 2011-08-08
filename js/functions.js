@@ -19,11 +19,16 @@ $(document).ready(function (){
 		spacing: 5
 	});
 
-	$('#box').hover(function() {
-		$('#box').animate({
+	$('#boxcontainer').hover(function() {
+		$('#box').stop().animate({
 			width: "50px",
 			opacity: 1.0,
 		}, 100);
+		},
+	function() {
+		$('#box').stop().animate({
+			width: "100%",
+			opacity: 0.4,
+		}, 1000);
 	});
-
 });
