@@ -26,8 +26,10 @@ div, body, p, span {
 
 #top-bar {
   width: 100%;
-  height: 8px;
+  height: 6px;
   background: $theme-color;
+  border-bottom: 3px solid darken($theme-color, 15%);
+  z-index: -1;
 }
 
 #wrapper {
@@ -42,33 +44,36 @@ header {
   height: 150px;
 
   .left-split {
-    width: 200px;
+    width: 175px;
     position: absolute;
     top: 80px;
     left: 0;
-}
-.right-split {
-  position: absolute;
-  top: 80px;
-  left: 200px;
-  width: $site-width - 200px - 20px;
-  margin-left: 20px;
-
-  span {
+  }
+  .right-split {
     position: absolute;
-    left: 0;
-    top: 30px;
-  }
+    top: 80px;
+    left: 175px;
+    width: $site-width - 175px - 20px;
+    margin-left: 20px;
 
-  h1 a {
-    font-size: 18px;
-    color: black;
+    span {
+      position: absolute;
+      left: 0;
+      top: 30px;
+    }
 
-    &:hover {
-      color: $theme-color;
-          }
+    h1 a {
+      position: absolute;
+      left: 0;
+      top: 5px;
+      font-size: 18px;
+      color: black;
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
   }
-}
 }
 
 #boxcontainer {
@@ -83,14 +88,17 @@ header {
   height: 50px;
   background: $theme-color;
 
+  border: 3px solid darken($theme-color, 15%);
+
   span {
+    display: block;
     width: 100%;
     height: 100%;
     text-align: center;
     color: white;
     font-weight: bold;
     padding-top: 15px;
-}
+  }
 }
 
 .opaque {
@@ -101,7 +109,7 @@ header {
 
 .navwrap {
   position: absolute;
-  top: 0;
+  top: -3px;
   right: 0;
 }
 
@@ -121,7 +129,11 @@ header {
     width: 100px;
     height: 40px;
     margin-right: 5px;
-}
+
+    border-bottom: 3px solid darken($theme-color, 15%);
+    border-left: 3px solid darken($theme-color, 15%);
+    border-right: 3px solid darken($theme-color, 15%);
+  }
 }
 
 .navitem {
@@ -129,6 +141,7 @@ header {
   height: 100%;
   margin-top: 10px;
   text-align: center;
+
   a {
     display: block;
     width: 100%;
@@ -138,7 +151,7 @@ header {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
-}
+  }
 }
 
 /* post layout code */
@@ -150,30 +163,31 @@ header {
     border-bottom: 2px solid $hr-color;
     padding-top: 20px;
     padding-bottom: 40px;
-}
-
-.left-split {
-  float: left;
-  width: 200px;
-
-  text-align: right;
-  padding-right: 20px;
-
-  color: #7a7a7a;
-
-  #date {
-    border-right: 1px solid $hr-color;
-    float: right;
-    padding: 5px 5px 4px 0;
-    margin-top: 10px;
-    margin-right: 0;
   }
-}
 
-.right-split {
-  float: left;
-  width: $site-width - 200px - 20px;
-}
+  .left-split {
+    float: left;
+    width: 175px;
+
+    text-align: right;
+    padding-right: 20px;
+
+    color: #7a7a7a;
+
+    #date {
+      border-right: 1px solid $hr-color;
+      float: right;
+      padding: 5px 5px 4px 0;
+      margin-top: 10px;
+      margin-right: 0;
+    }
+  }
+
+  .right-split {
+    float: left;
+    width: $site-width - 175px - 20px;
+  }
+
   h1 a {
     color: black;
     font-size: 24px;
