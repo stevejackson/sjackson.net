@@ -1,15 +1,27 @@
 $theme-color: #cd0a0a;
-$site-width: 900px;
+$site-width: 960px;
 $hr-color: #b6b6b6;
+$base-font-color: #333;
 
 body {
   //  background-image: url('/img/bg3.png');
   background-repeat: repeat-x repeat-y;
   //background: #fcfcfc;
+  font-family: proxima-nova, sans-serif;
 }
 
 p {
-  margin-bottom: 1em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+
+  margin: 0 0 12px 0;
+}
+
+div, body, p, span {
+  color: $base-font-color;
+  font-size: 15px;
 }
 
 #top-bar {
