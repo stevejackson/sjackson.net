@@ -170,7 +170,7 @@ header {
     text-align: right;
     padding-right: 20px;
     color: #7a7a7a; }
-    #content .left-split #date {
+    #content .left-split .date {
       border-right: 1px solid #b6b6b6;
       font-size: 14px;
       float: right;
