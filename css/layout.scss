@@ -56,6 +56,7 @@ header {
     left: 175px;
     width: $site-width - 175px - 20px;
     margin-left: 20px;
+    height: 50px;
 
     span {
       position: absolute;
@@ -74,7 +75,61 @@ header {
         color: $theme-color;
       }
     }
+
+    .icons {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      ul {
+        list-style: none;
+        position: relative;
+
+        li {
+          display: block;
+          width: 48px;
+          height: 48px;
+          margin-left: 10px;
+          overflow: hidden;
+          cursor: pointer;
+          float: left;
+
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    
   }
+}
+
+.iconcontainer {
+  position: relative;
+  top: -50px;
+  width: 100%;
+  height: 100%;
+}
+
+.github {
+  background: url("/img/icons/github.png");
+}
+.linkedin {
+  background: url("/img/icons/linkedin-48x48.png");
+}
+.skype {
+  background: url("/img/icons/skype-48x48.png");
+}
+.meetup {
+  background: url("/img/icons/meetup-48x48.png");
+}
+.twitter {
+  background: url("/img/icons/twitter-48x48.png");
+}
+.googleplus {
+  background: url("/img/icons/g-plus-icon-48x48.png");
 }
 
 #boxcontainer {
@@ -140,7 +195,7 @@ header {
 .navitem {
   width: 100%;
   height: 100%;
-  margin-top: 10px;
+  margin-top: 13px;
   text-align: center;
 
   a {
