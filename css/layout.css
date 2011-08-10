@@ -1,6 +1,6 @@
 body {
   background-repeat: repeat-x repeat-y;
-  background: #f1f1f1;
+  background: #fafafa;
   font-family: proxima-nova, sans-serif; }
 
 p {
@@ -8,6 +8,7 @@ p {
   -webkit-margin-after: 1em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
+  line-height: 1.5em;
   margin: 0 0 12px 0; }
 
 div, body, p, span {
@@ -50,8 +51,7 @@ header {
       position: absolute;
       left: 0;
       top: 5px;
-      font-size: 18px;
-      color: black; }
+      font-size: 18px; }
       header .right-split h1 a:hover {
         color: #cd0a0a; }
     header .right-split .icons {
@@ -85,12 +85,6 @@ header {
 
 .linkedin {
   background: url("/img/icons/linkedin-48x48.png"); }
-
-.skype {
-  background: url("/img/icons/skype-48x48.png"); }
-
-.meetup {
-  background: url("/img/icons/meetup-48x48.png"); }
 
 .twitter {
   background: url("/img/icons/twitter-48x48.png"); }
@@ -187,9 +181,20 @@ header {
     width: 765px; }
   #content h1 a {
     color: black;
-    font-size: 24px; }
+    font-weight: 300;
+    font-size: 36px;
+    padding-bottom: 20px;
+    display: block; }
     #content h1 a:hover {
       color: #cd0a0a; }
+
+article a {
+  border-bottom: 1px dotted #cd0a0a; }
+  article a:hover {
+    color: #cd0a0a;
+    background-color: #fdd9d9;
+    border-bottom: 1px solid #cd0a0a;
+    text-decoration: none; }
 
 /********************/
 footer {
@@ -198,9 +203,6 @@ footer {
 a {
   color: #cd0a0a;
   text-decoration: none; }
-
-a:hover {
-  text-decoration: underline; }
 
 ::-moz-selection {
   background: #cd0a0a;

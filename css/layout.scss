@@ -6,7 +6,7 @@ $base-font-color: #333;
 body {
   //  background-image: url('/img/bg3.png');
   background-repeat: repeat-x repeat-y;
-  background: #f1f1f1;
+  background: #fafafa;
   //background: #fcfcfc;
   font-family: proxima-nova, sans-serif;
 }
@@ -17,6 +17,7 @@ p {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
 
+  line-height: 1.5em;
   margin: 0 0 12px 0;
 }
 
@@ -69,7 +70,6 @@ header {
       left: 0;
       top: 5px;
       font-size: 18px;
-      color: black;
 
       &:hover {
         color: $theme-color;
@@ -118,12 +118,6 @@ header {
 }
 .linkedin {
   background: url("/img/icons/linkedin-48x48.png");
-}
-.skype {
-  background: url("/img/icons/skype-48x48.png");
-}
-.meetup {
-  background: url("/img/icons/meetup-48x48.png");
 }
 .twitter {
   background: url("/img/icons/twitter-48x48.png");
@@ -247,11 +241,25 @@ header {
 
   h1 a {
     color: black;
-    font-size: 24px;
+    font-weight: 300;
+    font-size: 36px;
+    padding-bottom: 20px;
+    display: block;
 
     &:hover {
       color: $theme-color;
     }
+  }
+}
+
+article a {
+  border-bottom: 1px dotted $theme-color;
+  
+  &:hover {
+    color: $theme-color;
+    background-color: lighten($theme-color, 50%);
+    border-bottom: 1px solid $theme-color;
+    text-decoration: none;
   }
 }
 
@@ -267,7 +275,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  //text-decoration: underline;
 }
 
 ::-moz-selection{background: $theme-color; color: #fff; text-shadow: none;}

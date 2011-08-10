@@ -38,15 +38,12 @@ $(document).ready(function (){
     }, 500);
   });
 
-  socialIcons();
-
-  function socialIcons() {
-    $('.iconcontainer').each(function(index) {
-      $(this).animate({
-        opacity: 0.5,
-        top: 0,
-      }, 2000);
-    });
-  }
+  // bring the social icons down
+  $('.iconcontainer').each(function(index) {
+    $(this).animate({
+      opacity: 0.5,
+      top: 0,
+    }, 2000);
+  });
 
 });
