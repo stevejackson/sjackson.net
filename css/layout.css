@@ -48,6 +48,7 @@ header {
       left: 0;
       top: 30px; }
     header .right-split h1 a {
+      color: black;
       position: absolute;
       left: 0;
       top: 5px;
