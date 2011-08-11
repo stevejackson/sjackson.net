@@ -1,0 +1,20 @@
+---
+layout: default
+title: Steve Jackson
+---
+{% for post in site.posts %}
+
+<div class="blog-post">
+  <div class="left-split">
+    <div class="date"> {{ post.date | date_to_string }} </div>
+  </div>
+
+  <div class="right-split">
+    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <article>
+      {{ post.content }} 
+    </article>
+  </div>
+  <div class="clear"></div>
+</div>
+{% endfor %}

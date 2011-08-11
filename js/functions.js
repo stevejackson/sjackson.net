@@ -7,23 +7,21 @@ $(document).ready(function (){
     spacing: 15
   });
 
-  // defin the hover in/out property on the sjj box
+  // define the hover in/out property on the sjj box
   $('#boxcontainer').hover(function() {
     $('#box').stop().animate({
-      width: "50px",
-      opacity: 1.0,
-    }, 100);
+      width: "95%",
+    }, 1000);
   },
   function() {
     $('#box').stop().animate({
-      width: "100%",
-    opacity: 0.4,
+      width: "50px",
     }, 1000);
   });
 
   // when the site loads, animate sjj box to the left
   $('#box').animate({
-    width: "172px",
+    width: "50px",
   }, 1000);
 
   // hover over effect for social icons
@@ -46,4 +44,13 @@ $(document).ready(function (){
     }, 2000);
   });
 
+  // load tweets
+  getTwitters('tweet', { 
+    id: 'wycats', 
+    count: 3, 
+    enableLinks: true, 
+    ignoreReplies: true, 
+    clearContents: true,
+    template: '<p>"%text%" <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a></p>',
+  });
 });

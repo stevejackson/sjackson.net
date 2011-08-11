@@ -32,15 +32,15 @@ header {
   margin-bottom: 25px;
   height: 150px; }
   header .left-split {
-    width: 175px;
+    width: 125px;
     position: absolute;
     top: 80px;
     left: 0; }
   header .right-split {
     position: absolute;
     top: 80px;
-    left: 175px;
-    width: 765px;
+    left: 125px;
+    width: 815px;
     margin-left: 20px;
     height: 50px; }
     header .right-split span {
@@ -100,9 +100,10 @@ header {
 
 #box {
   float: right;
-  width: 50px;
+  width: 95%;
   height: 50px;
   background: #cd0a0a;
+  cursor: pointer;
   border: 3px solid #840606; }
   #box span {
     display: block;
@@ -166,7 +167,7 @@ header {
     padding-bottom: 40px; }
   #content .left-split {
     float: left;
-    width: 175px;
+    width: 125px;
     text-align: right;
     padding-right: 20px;
     color: #7a7a7a; }
@@ -179,7 +180,8 @@ header {
       margin-right: 0; }
   #content .right-split {
     float: left;
-    width: 765px; }
+    width: 575px;
+    margin-right: 15px; }
   #content h1 a {
     color: black;
     font-weight: 300;
@@ -188,6 +190,19 @@ header {
     display: block; }
     #content h1 a:hover {
       color: #cd0a0a; }
+
+.left-column {
+  float: left;
+  width: 735px; }
+
+.right-column {
+  float: left;
+  width: 225px;
+  margin-top: 30px; }
+  .right-column #tweet {
+    background: #f5f5f5;
+    border: 3px solid #dcdcdc;
+    padding: 10px; }
 
 article a {
   border-bottom: 1px dotted #cd0a0a; }
