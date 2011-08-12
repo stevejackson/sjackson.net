@@ -1,5 +1,5 @@
 $theme-color: #cd0a0a;
-$site-width: 960px;
+$site-width: 985px;
 $hr-color: #b6b6b6;
 $base-font-color: #333;
 
@@ -238,8 +238,8 @@ header {
 
   .right-split {
     float: left;
-    width: $site-width - 225px - 15px - 125px - 20px;
-    margin-right: 15px;
+    width: $site-width - 250px - 25px - 125px - 20px;
+    margin-right: 25px;
   }
 
 
@@ -259,18 +259,21 @@ header {
 
 .left-column {
   float: left;
-  width: $site-width - 225px;
+  width: $site-width - 250px;
 }
 
 .right-column {
     float: left;
-    width: 225px;
+    width: 250px;
     margin-top: 30px;
 
     #tweet {
       background: #f5f5f5;
       border: 3px solid darken(#f5f5f5, 10%);
       padding: 10px;
+    }
+    .twitterbutton {
+      text-align: center;
     }
 }
 
@@ -312,3 +315,6 @@ mark {background-color: $theme-color; color: #000; font-style: italic; font-weig
   clear: both;
 }
 
+pre {
+  white-space: pre-wrap; 
+}

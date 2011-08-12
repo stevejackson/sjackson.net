@@ -46,11 +46,11 @@ $(document).ready(function (){
 
   // load tweets
   getTwitters('tweet', { 
-    id: 'wycats', 
-    count: 3, 
+    id: '_sjackson', 
+    count: 5, 
     enableLinks: true, 
     ignoreReplies: true, 
-    clearContents: true,
-    template: '<p>"%text%" <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a></p>',
+    clearContents: false,
+    template: '<p>%text%<br/> &nbsp;&nbsp;&mdash; <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a></p>',
   });
 });
