@@ -216,7 +216,14 @@ article a {
 
 /********************/
 footer {
-  margin-top: 20px; }
+  position: relative;
+  top: -3px;
+  height: 300px;
+  background: #ccc; }
+
+#footercontent {
+  width: 985px;
+  margin: 0 auto; }
 
 a {
   color: #cd0a0a;
