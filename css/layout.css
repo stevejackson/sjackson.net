@@ -22,10 +22,15 @@ div, body, p, span {
   border-bottom: 3px solid #840606;
   z-index: -1; }
 
+html, body, #wrapper {
+  height: 100%; }
+
 #wrapper {
   position: relative;
   width: 985px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: auto;
+  min-height: 100%; }
 
 header {
   border-bottom: 2px solid #b6b6b6;
@@ -52,6 +57,7 @@ header {
       position: absolute;
       left: 0;
       top: 5px;
+      font-weight: 700;
       font-size: 18px; }
       header .right-split h1 a:hover {
         color: #cd0a0a; }
@@ -160,7 +166,8 @@ header {
 
 /* post layout code */
 #content {
-  width: 985px; }
+  width: 985px;
+  padding-bottom: 200px; }
   #content .blog-post {
     border-bottom: 2px solid #b6b6b6;
     padding-top: 20px;
@@ -182,14 +189,15 @@ header {
     float: left;
     width: 565px;
     margin-right: 25px; }
-  #content h1 a {
-    color: black;
-    font-weight: 300;
-    font-size: 36px;
-    padding-bottom: 20px;
-    display: block; }
-    #content h1 a:hover {
-      color: #cd0a0a; }
+
+h1 a {
+  color: black;
+  font-weight: 300;
+  font-size: 36px;
+  padding-bottom: 20px;
+  display: block; }
+  h1 a:hover {
+    color: #cd0a0a; }
 
 .left-column {
   float: left;
@@ -216,13 +224,24 @@ article a {
 
 /********************/
 footer {
+  clear: both;
+  z-index: 10;
   position: relative;
   top: -3px;
-  height: 300px;
-  background: #ccc; }
+  height: 200px;
+  background: #ccc;
+  border-top: 2px solid #999999;
+  margin-top: -200px; }
+  footer .col1 {
+    width: 400px;
+    float: left; }
+  footer .col2 {
+    width: 985px;
+    text-align: center; }
 
 #footercontent {
   width: 985px;
+  padding-top: 30px;
   margin: 0 auto; }
 
 a {

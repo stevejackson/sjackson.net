@@ -2,6 +2,7 @@ $theme-color: #cd0a0a;
 $site-width: 985px;
 $hr-color: #b6b6b6;
 $base-font-color: #333;
+$footer-height: 200px;
 
 body {
   //  background-image: url('/img/bg3.png');
@@ -34,10 +35,16 @@ div, body, p, span {
   z-index: -1;
 }
 
+html, body, #wrapper {
+  height: 100%;
+}
+
 #wrapper {
   position: relative;
   width: $site-width;
   margin: 0 auto;
+  height: auto;
+  min-height: 100%;
 }
 
 header {
@@ -70,6 +77,8 @@ header {
       position: absolute;
       left: 0;
       top: 5px;
+      font-weight: 700;
+  
       font-size: 18px;
 
       &:hover {
@@ -103,7 +112,7 @@ header {
         }
       }
     }
-    
+
   }
 }
 
@@ -210,6 +219,7 @@ header {
 
 #content {
   width: $site-width;
+  padding-bottom: $footer-height;
 
   .blog-post {
     border-bottom: 2px solid $hr-color;
@@ -241,19 +251,17 @@ header {
     width: $site-width - 250px - 25px - 125px - 20px;
     margin-right: 25px;
   }
+}
 
+h1 a {
+  color: black;
+  font-weight: 300;
+  font-size: 36px;
+  padding-bottom: 20px;
+  display: block;
 
-
-  h1 a {
-    color: black;
-    font-weight: 300;
-    font-size: 36px;
-    padding-bottom: 20px;
-    display: block;
-
-    &:hover {
-      color: $theme-color;
-    }
+  &:hover {
+    color: $theme-color;
   }
 }
 
@@ -263,23 +271,23 @@ header {
 }
 
 .right-column {
-    float: left;
-    width: 250px;
-    margin-top: 30px;
+  float: left;
+  width: 250px;
+  margin-top: 30px;
 
-    #tweet {
-      background: #f5f5f5;
-      border: 3px solid darken(#f5f5f5, 10%);
-      padding: 10px;
-    }
-    .twitterbutton {
-      text-align: center;
-    }
+  #tweet {
+    background: #f5f5f5;
+    border: 3px solid darken(#f5f5f5, 10%);
+    padding: 10px;
+  }
+  .twitterbutton {
+    text-align: center;
+  }
 }
 
 article a {
   border-bottom: 1px dotted $theme-color;
-  
+
   &:hover {
     color: $theme-color;
     background-color: lighten($theme-color, 50%);
@@ -291,14 +299,28 @@ article a {
 /********************/
 
 footer {
+  clear: both;
+  z-index: 10;
   position: relative;
   top: -3px;
-  height: 300px;
+  height: $footer-height;
   background: #ccc;
+  border-top: 2px solid darken(#ccc, 20%);
+  margin-top: -$footer-height;
+
+  .col1 {
+    width: 400px;
+    float: left;
+  }
+  .col2 {
+    width: $site-width;
+    text-align: center;
+  }
 }
 
 #footercontent {
   width: $site-width;
+  padding-top: 30px;
   margin: 0 auto;
 }
 
