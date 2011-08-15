@@ -78,7 +78,7 @@ header {
       left: 0;
       top: 5px;
       font-weight: 700;
-  
+
       font-size: 18px;
 
       &:hover {
@@ -295,6 +295,44 @@ article a {
     text-decoration: none;
   }
 }
+
+/********************
+ * Projects page
+ */
+
+.projects {
+  margin-top: 30px;
+  width: $site-width - 250px;
+
+  .project {
+    margin-right: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+
+    .image {
+      float: left;
+      width: 250px;
+    }
+
+    .description {
+      float: left;
+      width: $site-width - 300px - 250px - 20px - 30px; //image, twitter, margins
+      padding-left: 15px;
+    }
+
+    h1 {
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .tech {
+      font-style: italic;
+    }
+
+  }
+}
+
 
 /********************/
 
