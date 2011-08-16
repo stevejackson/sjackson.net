@@ -3,13 +3,31 @@ $site-width: 985px;
 $hr-color: #b6b6b6;
 $base-font-color: #333;
 $footer-height: 200px;
+$bg-color: #f4f4f4;
+$bg2-color: #434343;
+
+$landing-top-color: darken($bg-color, 5%);
+$landing-bot-color: $bg2-color;
+$landing-top-height: 350px;
+$landing-box-rise: 130px;
+$landing-border-color: lighten($landing-bot-color, 20%);
+$landing-border-size: 4px;
 
 body {
-  //  background-image: url('/img/bg3.png');
-  background-repeat: repeat-x repeat-y;
-  background: #f4f4f4;
-  //background: #fcfcfc;
+  background: $bg-color;
   font-family: proxima-nova, sans-serif;
+}
+body#landing {
+  background: $landing-bot-color;
+}
+
+#landing-upper {
+  float: left;
+  position: absolute;
+  background: $landing-top-color;
+  height: $landing-top-height;
+  width: 100%;
+  border-bottom: $landing-border-size solid $landing-border-color;
 }
 
 p {
@@ -379,6 +397,33 @@ footer {
   width: $site-width;
   padding-top: 30px;
   margin: 0 auto;
+}
+
+.landing {
+  background: $landing-bot-color;
+
+  .landing-top {
+    background: $landing-top-color;
+    width: 100%;
+    height: $landing-top-height;
+  }
+
+  .landing-bot {
+
+  }
+
+  #landing-box {
+    width: 100%;
+    position: absolute;
+    top: $landing-top-height - $landing-box-rise;
+    left: 0;
+    background: $landing-bot-color;
+    min-height: $landing-box-rise;
+    border-left: $landing-border-size solid $landing-border-color;
+    border-right: $landing-border-size solid $landing-border-color;
+    border-top: $landing-border-size solid $landing-border-color;
+    padding: 20px;
+  }
 }
 
 a {
