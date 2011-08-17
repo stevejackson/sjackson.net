@@ -18,7 +18,25 @@ body {
   font-family: proxima-nova, sans-serif;
 }
 body#landing {
-  background: $landing-bot-color;
+  background: $bg-color;
+}
+
+#landing-content {
+  width: 800px;
+  position: relative;
+  top: 200px;
+  margin: 0 auto;
+
+  #left-split {
+    float: left;
+    width: 300px;
+    border-right: 1px solid #ccc;
+  }
+
+  #right-split {
+    width: 500px;
+
+  }
 }
 
 #landing-upper {
@@ -435,7 +453,8 @@ a:hover {
   //text-decoration: underline;
 }
 
-::-moz-selection{background: $theme-color; color: #fff; text-shadow: none;}
+::-webkit-selection {background: $theme-color; color: #fff; text-shadow: none}
+::-moz-selection {background: $theme-color; color: #fff; text-shadow: none;}
 ::selection {background: $theme-color; color: #fff; text-shadow: none;} 
 
 a:link {-webkit-tap-highlight-color: $theme-color;} 

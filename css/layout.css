@@ -3,7 +3,19 @@ body {
   font-family: proxima-nova, sans-serif; }
 
 body#landing {
-  background: #434343; }
+  background: #f4f4f4; }
+
+#landing-content {
+  width: 800px;
+  position: relative;
+  top: 200px;
+  margin: 0 auto; }
+  #landing-content #left-split {
+    float: left;
+    width: 300px;
+    border-right: 1px solid #ccc; }
+  #landing-content #right-split {
+    width: 500px; }
 
 #landing-upper {
   float: left;
@@ -313,6 +325,11 @@ footer {
 a {
   color: #cd0a0a;
   text-decoration: none; }
+
+::-webkit-selection {
+  background: #cd0a0a;
+  color: #fff;
+  text-shadow: none; }
 
 ::-moz-selection {
   background: #cd0a0a;
