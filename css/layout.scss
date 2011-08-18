@@ -22,10 +22,11 @@ body#landing {
 }
 
 #landing-content {
-  width: 800px;
+  width: 900px;
   position: relative;
   top: 200px;
   margin: 0 auto;
+  height: 100%;
 
   #left-split {
     float: left;
@@ -34,18 +35,47 @@ body#landing {
   }
 
   #right-split {
+    float: left;
     width: 500px;
+    padding-left: 25px;
+    position: relative;
 
+    .smalltext {
+      font-size: 18px;
+    }
+    .name {
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: $theme-color;
+    }
+    .belowtext {
+      font-size: 18px;
+      padding-bottom:25px;
+    }
+    .widerule {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6em;
+    }
   }
-}
+  .networklinks a {
+    margin-right: 10px;
+  }
+  a {
+    border-bottom: 1px dotted $theme-color;
 
-#landing-upper {
-  float: left;
-  position: absolute;
-  background: $landing-top-color;
-  height: $landing-top-height;
-  width: 100%;
-  border-bottom: $landing-border-size solid $landing-border-color;
+    &:hover {
+      color: $theme-color;
+      background-color: lighten($theme-color, 50%);
+      border-bottom: 1px solid $theme-color;
+      text-decoration: none;
+    }
+  }
 }
 
 p {

@@ -4,7 +4,7 @@ $(document).ready(function (){
   $('.navsub').kwicks({
     max: 150,
     min: 80, 
-    spacing: 15
+    spacing: 15,
   });
 
   // define the hover in/out property on the sjj box
