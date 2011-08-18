@@ -6,28 +6,29 @@ $footer-height: 200px;
 $bg-color: #f4f4f4;
 $bg2-color: #434343;
 
-$landing-top-color: darken($bg-color, 5%);
-$landing-bot-color: $bg2-color;
-$landing-top-height: 350px;
-$landing-box-rise: 130px;
-$landing-border-color: lighten($landing-bot-color, 20%);
-$landing-border-size: 4px;
+$landing-width: 840px;
 
 body {
   background: $bg-color;
+  background-image: url('/img/bg.png');
+  background-repeat: repeat-x repeat-y;
   font-family: proxima-nova, sans-serif;
 }
 body#landing {
   background: $bg-color;
+  background-image: url('/img/bg.png');
+  background-repeat: repeat-x repeat-y;
 }
 
 #landing-content {
-  width: 900px;
+  width: $landing-width;
   position: relative;
-  top: 200px;
+  top: 160px;
   margin: 0 auto;
   height: 100%;
 
+  background-image: url('/img/bg.png');
+  background-repeat: repeat-x repeat-y;
   #left-split {
     float: left;
     width: 300px;
@@ -40,18 +41,22 @@ body#landing {
     padding-left: 25px;
     position: relative;
 
-    .smalltext {
-      font-size: 18px;
-    }
-    .name {
+    .abovetext {
+      span {
+        font-size: 16px;
+      }
     }
     h1 {
       font-size: 36px;
       font-weight: bold;
       color: $theme-color;
+      text-shadow: #BBB 1px 1px 7px;
     }
     .belowtext {
-      font-size: 18px;
+      span {
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
       padding-bottom:25px;
     }
     .widerule {
@@ -63,9 +68,6 @@ body#landing {
       line-height: 1.6em;
     }
   }
-  .networklinks a {
-    margin-right: 10px;
-  }
   a {
     border-bottom: 1px dotted $theme-color;
 
@@ -76,6 +78,10 @@ body#landing {
       text-decoration: none;
     }
   }
+}
+
+.networklinks a {
+  margin-right: 10px;
 }
 
 p {
@@ -111,6 +117,11 @@ html, body, #wrapper {
   margin: 0 auto;
   height: auto;
   min-height: 100%;
+}
+
+#wrapper-landing {
+  @extend #wrapper;
+  width: $landing-width;
 }
 
 header {
@@ -445,33 +456,6 @@ footer {
   width: $site-width;
   padding-top: 30px;
   margin: 0 auto;
-}
-
-.landing {
-  background: $landing-bot-color;
-
-  .landing-top {
-    background: $landing-top-color;
-    width: 100%;
-    height: $landing-top-height;
-  }
-
-  .landing-bot {
-
-  }
-
-  #landing-box {
-    width: 100%;
-    position: absolute;
-    top: $landing-top-height - $landing-box-rise;
-    left: 0;
-    background: $landing-bot-color;
-    min-height: $landing-box-rise;
-    border-left: $landing-border-size solid $landing-border-color;
-    border-right: $landing-border-size solid $landing-border-color;
-    border-top: $landing-border-size solid $landing-border-color;
-    padding: 20px;
-  }
 }
 
 a {
