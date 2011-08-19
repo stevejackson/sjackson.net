@@ -1,10 +1,10 @@
-h1. This is the source and data for my site.
+== This is the source and data for my site.
 It's powered by "http://jekyllrb.com":Jekhttp://jekyllrb.com":Jekyll
 
-h1. License
+== License
 The following directories are copyright Steve Jackson:
 
-  * _posts/
-  * images/
+* _posts/
+* images/
 
 If you want to learn from or use the code - go for it!

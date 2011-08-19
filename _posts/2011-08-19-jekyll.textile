@@ -4,9 +4,9 @@ title: Running with Jekyll
 date: August 18, 2011
 ---
 
-So here we are: you're looking at my new site, built on {"Jekyll"}[https://github.com/mojombo/jekyll], the famed blogging platform for hackers. I'm sufficiently impressed. I'll skim over a bit of what I used to build this for anyone interested.
+So here we are: you're looking at my new site, built on "Jekyll":https://github.com/mojombo/jekyll, the famed blogging platform for hackers. I'm sufficiently impressed. I'll skim over a bit of what I used to build this for anyone interested.
 
-After doing the basic install, I set up a {"git repo"}[https://github.com/stevejackson/sjackson.net] to host my code. This is one of biggest appeals of Jekyll: you're not stuffing your blog posts into a database; they're saved conveniently in a readable, and writable, markdown format (of your choice) anywhere you'd like.
+After doing the basic setup by grabbing a couple gem installs, I set up a "git repo":https://github.com/stevejackson/sjackson.net. This is one of biggest appeals of Jekyll: you're not stuffing your blog posts into a database; they're saved conveniently in a readable, writable, markdown format of your choice anywhere you'd like.
 
 Next I threw together my go-to deployment hack: a rakefile or some other wrapper to wrap an rsync command.
 
@@ -22,22 +22,8 @@ end
 
 Nice and easy, that's how we like it.
 
-h2. This is some quick test text.
+Then I linked up my "Typekit":http://typekit.com account to an "html5reset":http://html5reset.org fetch. 
 
-Some more text.
+Next, I installed the "sass gem":http://www.sass-lang.com, because pure CSS is for suckers. Then it's go time. I ended up using a few js/jquery plugins: "Fancybox":http://fancybox.net as a solid lightbox solution, "twitterjs":http://code.google.com/p/twitterjs/ as a quick twitter solution, and "jquery.kwicks":http://www.jeremymartin.name/projects.php?project=kwicks for the nav-menu effect.
 
-
-outline:
-* site created w/ jekyll, links to jekyll
-* process of getting it set up
-* rake/rsync
-* typekit
-* stuff I used:
-** typekit
-** html5reset
-** jQuery
-** SASS
-** jquery.twitter
-** fancybox
-** jquery.kwicks
-* saucelabs
+That's pretty much it: after doing some quick testing with "saucelabs":http://saucelabs.com for browser compatibility, I'm live. An entirely painless experience; I'd recommend giving Jekyll a shot for your next blog if you like toying around with code rather than unwieldy CMS solutions that are entirely overkill for small sites. Static HTML is no longer really "static"; you can implement client-side javascript to do many of the things you'll need (effects, disqus for comments, etc.)
