@@ -6,13 +6,13 @@ date: August 18, 2011
 
 So here we are: you're looking at my new site, built on "Jekyll":https://github.com/mojombo/jekyll, the famed blogging platform for hackers. I'm sufficiently impressed. I'll skim over a bit of what I used to build this for anyone interested.
 
-After doing the basic setup by grabbing a couple gem installs, I set up a "git repo":https://github.com/stevejackson/sjackson.net. This is one of biggest appeals of Jekyll: you're not stuffing your blog posts into a database; they're saved conveniently in a readable, writable, markdown format of your choice anywhere you'd like.
+After doing the basic setup by grabbing a couple gem installs, I set up a "git repo":https://github.com/stevejackson/sjackson.net. This is one of biggest appeals of Jekyll: you're not stuffing your blog posts into a database; they're saved conveniently in a readable, writable, markup format of your choice anywhere you'd like.
 
 Next I threw together my go-to deployment hack: a rakefile or some other wrapper to wrap an rsync command.
 
 {% highlight ruby %}
 task :deploy do
-  sh %{rsync -avz --delete _site/ myserver:/my/app/location/on/server/}
+  sh %{jekyll && rsync -avz --delete _site/ myserver:/my/app/location/on/server/}
 end
 
 task :server do
