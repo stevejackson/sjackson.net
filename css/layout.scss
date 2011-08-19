@@ -1,3 +1,12 @@
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
 $theme-color: #cd0a0a;
 $site-width: 985px;
 $hr-color: #b6b6b6;
@@ -20,6 +29,12 @@ body#landing {
   background-repeat: repeat-x repeat-y;
 }
 
+.highlightedImage {
+  @include borderRadius(5px);
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 7px;
+}
+
 #landing-content {
   width: $landing-width;
   position: relative;
@@ -27,12 +42,17 @@ body#landing {
   margin: 0 auto;
   height: 100%;
 
+  p, span, div {
+    text-shadow: white 0px 1px 0px;
+  }
+
   background-image: url('/img/bg.png');
   background-repeat: repeat-x repeat-y;
   #left-split {
     float: left;
     width: 300px;
     border-right: 1px solid #ccc;
+    padding-right: 8px;
   }
 
   #right-split {
@@ -50,7 +70,7 @@ body#landing {
       font-size: 36px;
       font-weight: bold;
       color: $theme-color;
-      text-shadow: #BBB 1px 1px 7px;
+      text-shadow: #BBB 1px 1px 4px;
     }
     .belowtext {
       span {
@@ -73,9 +93,10 @@ body#landing {
 
     &:hover {
       color: $theme-color;
-      background-color: lighten($theme-color, 50%);
+      background-color: lighten($theme-color, 40%);
       border-bottom: 1px solid $theme-color;
       text-decoration: none;
+      text-shadow: none;
     }
   }
 }
@@ -368,7 +389,7 @@ article a {
 
   &:hover {
     color: $theme-color;
-    background-color: lighten($theme-color, 50%);
+    background-color: lighten($theme-color, 40%);
     border-bottom: 1px solid $theme-color;
     text-decoration: none;
   }

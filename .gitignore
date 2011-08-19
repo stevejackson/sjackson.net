@@ -1,6 +1,6 @@
-/rakefile
 *.swp
 /_site/*
 /bin/*
 /.sass-cache/*
 /css/.sass-cache/*
+/css/layout.css

@@ -1,0 +1,5 @@
+require 'fileutils'
+
+task :deploy do
+  sh %{rsync -avz --delete _site/ magellan:/var/www/apps/sjackson.net/live/public_html/ }
+end
