@@ -1,5 +1,5 @@
 == This is the source and data for my site.
-It's powered by {"Jekyll"}[http://jekyllrb.com].
+It's powered by {Jekyll}[http://jekyllrb.com].
 
 == License
 The following directories are copyright Steve Jackson:
