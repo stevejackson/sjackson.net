@@ -407,17 +407,19 @@ article a {
 
   .project {
     margin-right: 15px;
+    padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 
     .image {
       float: left;
-      width: 250px;
+      width: 260px;
+      padding-right: 15px;
     }
 
     .description {
       float: left;
-      width: $site-width - 300px - 250px - 20px - 30px; //image, twitter, margins
+      width: $site-width - 300px - 250px - 15px; //image, twitter, margins
       padding-left: 15px;
     }
 
