@@ -1,0 +1,10 @@
+---
+layout: post
+title: Building a blog with Jekyll
+date: August 18, 2011
+---
+Running with Jekyll
+
+This is some quick test text.
+
+Some more text.
