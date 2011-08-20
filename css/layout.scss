@@ -441,7 +441,8 @@ article a {
 .left-column-about {
   float: left;
   width: $site-width - 270px;
-  padding-right: 20px;
+  padding-right: 18px;
+  padding-left: 2px;
   margin-top: 30px;
 
   img {
@@ -507,4 +508,7 @@ mark {background-color: $theme-color; color: #000; font-style: italic; font-weig
 
 pre {
   white-space: pre-wrap; 
+}
+.selfpic {
+  width: 275px;
 }
