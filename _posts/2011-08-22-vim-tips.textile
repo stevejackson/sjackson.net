@@ -29,7 +29,7 @@ endfunction
 
 h2. Get Some Ipsum
 
-Find yourself repeatedly going to an lorem ipsum generator while prototyping? Leverage the simple power of abbreviations by shortcutting the first couple paragraphs of lipsum. Why not use "Hipster Ipsum?":http://hipsteripsum.me
+Find yourself repeatedly going to a lorem ipsum generator while prototyping? Leverage the simple power of abbreviations by shortcutting the first couple paragraphs of lipsum. Why not use "Hipster Ipsum?":http://hipsteripsum.me
 
 {% highlight vim %}
 iab lipsum1 filler text of choice here.
