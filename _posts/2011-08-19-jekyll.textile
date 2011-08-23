@@ -22,7 +22,7 @@ end
 
 Nice and easy, that's how we like it.
 
-Then I linked up my "Typekit":http://typekit.com account to an "html5reset":http://html5reset.org fetch. 
+Then I linked up my "Typekit":http://typekit.com account to an "html5reset":http://html5reset.org fetch.
 
 Next, I installed the "sass gem":http://www.sass-lang.com, because pure CSS is for suckers. Then it's go time. I ended up using a few js/jquery plugins: "Fancybox":http://fancybox.net as a solid lightbox solution, "twitterjs":http://code.google.com/p/twitterjs/ as a quick twitter solution, and "jquery.kwicks":http://www.jeremymartin.name/projects.php?project=kwicks for the nav-menu effect.
 
