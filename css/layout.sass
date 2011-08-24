@@ -22,11 +22,6 @@ body
   background-repeat: repeat-x repeat-y
   font-family: proxima-nova, sans-serif
 
-body#landing
-  background: $bg-color
-  background-image: url("/img/bg.png")
-  background-repeat: repeat-x repeat-y
-
 .highlightedImage
   +borderRadius(5px)
   background-color: rgba(0, 0, 0, 0.15)
@@ -382,17 +377,7 @@ a
 a:hover
   //text-decoration: underline;
 
-\::-webkit-selection
-  background: $theme-color
-  color: #fff
-  text-shadow: none
-
-\::-moz-selection
-  background: $theme-color
-  color: #fff
-  text-shadow: none
-
-\::selection
+\::-webkit-selection, ::-moz-selection, ::selection
   background: $theme-color
   color: #fff
   text-shadow: none
