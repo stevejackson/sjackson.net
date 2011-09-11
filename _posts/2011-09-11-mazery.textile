@@ -1,0 +1,11 @@
+---
+layout: post
+title: HTML5 Canvas Mazery
+date: September 11, 2011
+---
+
+I've been wanting a reason to fool around with CoffeeScript and the HTML5 Canvas element for quite awhile, so I finally did so yesterday and "created mazery":http://mazery.sjackson.net. It's a maze generation visualizer. It's purposely built with an inefficient algorithm (Hunt and Kill) simply so that I can show the cool traversal process visually.
+
+I'm majorly impressed by CoffeeScript. You can "check out my code":http://github.com/stevejackson/mazery on github. Feel free to provide feedback on anything I'm not doing the CoffeeScript way.
+
+I'll hopefully get around to adding some stuff to mazery as time goes by, such as a solver. We'll see!
