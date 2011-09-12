@@ -331,6 +331,14 @@ article a
       font-weight: 700
     .tech
       font-style: italic
+  a
+    border-bottom: 1px dotted $theme-color
+    &:hover
+      color: $theme-color
+      background-color: lighten($theme-color, 40%)
+      border-bottom: 1px solid $theme-color
+      text-decoration: none
+      text-shadow: none
 
 /** about page *****
 
