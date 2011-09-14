@@ -6,6 +6,26 @@
   -o-border-radius: $radius
   border-radius: $radius
 
+=boxShadow($val1, $val2, $val3, $val4, $val5)
+  -moz-box-shadow: $val1 $val2 $val3 $val4 $val5
+  -webkit-box-shadow: $val1 $val2 $val3 $val4 $val5
+  -o-box-shadow: $val1 $val2 $val3 $val4 $val5
+  box-shadow: $val1 $val2 $val3 $val4 $val5
+
+=transitionAll($property, $time, $function)
+  -moz-transition-property: $property
+  -webkit-transition-property: $property
+  -o-transition-property: $property
+  transition-property: $property
+  -moz-transition-duration: $time 
+  -webkit-transition-duration: $time 
+  -o-transition-duration: $time 
+  transition-duration: $time 
+  -moz-transition-timing-function: $function
+  -webkit-transition-timing-function: $function
+  -o-transition-timing-function: $function
+  transition-timing-function: $function
+
 $theme-color: #cd0a0a
 $site-width: 985px
 $hr-color: #b6b6b6
@@ -24,8 +44,10 @@ body
 
 .highlightedImage
   +borderRadius(5px)
-  background-color: rgba(0, 0, 0, 0.15)
-  padding: 7px
+  +transitionAll(all, 0.2s, ease-in)
+  +boxShadow(0, 0, 0, 7px, rgba(0,0,0,.2))
+  &:hover
+    +boxShadow(0, 0, 0, 13px, rgba(0,0,0,.2))
 
 #landing-content
   width: $landing-width
@@ -66,6 +88,12 @@ body
     p
       font-size: 16px
       line-height: 1.6em
+  a.img
+    border-bottom: none
+    &:hover
+      color: none
+      background-color: transparent
+      border-bottom: none
   a
     border-bottom: 1px dotted $theme-color
     &:hover
@@ -331,6 +359,12 @@ article a
       font-weight: 700
     .tech
       font-style: italic
+  a.img
+    border-bottom: none
+    &:hover
+      color: none
+      background-color: transparent
+      border-bottom: none
   a
     border-bottom: 1px dotted $theme-color
     &:hover
