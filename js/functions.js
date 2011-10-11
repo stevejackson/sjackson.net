@@ -4,35 +4,35 @@ $(document).ready(function (){
   $('.navsub').kwicks({
     max: 150,
     min: 80, 
-    spacing: 15,
+    spacing: 15
   });
 
   // define the hover in/out property on the sjj box
   $('#boxcontainer').hover(function() {
     $('#box').stop().animate({
-      width: "95%",
+      width: "95%"
     }, 1000);
   },
   function() {
     $('#box').stop().animate({
-      width: "50px",
+      width: "50px"
     }, 1000);
   });
 
   // when the site loads, animate sjj box to the left
   $('#box').animate({
-    width: "50px",
+    width: "50px"
   }, 1000);
 
   // hover over effect for social icons
   $('.iconcontainer').hover(function() {
     $(this).animate({
-      opacity: 1.0,
+      opacity: 1.0
     }, 500);
   },
   function() {
     $(this).animate({
-      opacity: 0.5,
+      opacity: 0.5
     }, 500);
   });
 
@@ -40,7 +40,7 @@ $(document).ready(function (){
   $('.iconcontainer').each(function(index) {
     $(this).animate({
       opacity: 0.5,
-      top: 0,
+      top: 0
     }, 2000);
   });
 
@@ -51,6 +51,6 @@ $(document).ready(function (){
     enableLinks: true, 
     ignoreReplies: true, 
     clearContents: false,
-    template: '<p>%text%<br/> &nbsp;&nbsp;&mdash; <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a></p>',
+    template: '<p>%text%<br/> &nbsp;&nbsp;&mdash; <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a></p>'
   });
 });
