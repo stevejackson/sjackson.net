@@ -1,2 +1,5 @@
 markdown: rdiscount
 pygments: true
+sass:
+  syntax: sass        # scss|sass
+  style:  compressed  # nested|expanded|compact|compressed

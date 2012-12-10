@@ -5,3 +5,5 @@
 /css/.sass-cache/*
 /css/layout.css
 /rakefile
+.rvmrc
+/rakefile
