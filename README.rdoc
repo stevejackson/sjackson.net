@@ -1,6 +1,18 @@
 == This is the source and data for my site.
 It's powered by {Jekyll}[http://jekyllrb.com].
 
+== Setup
+
+  bundle install
+
+Install pygments: https://github.com/mojombo/jekyll/wiki/install
+
+Set up deployment info in rakefile.
+
+Run server:
+
+  rake server
+
 == License
 The following directories are copyright Steve Jackson:
 
