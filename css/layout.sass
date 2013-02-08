@@ -17,10 +17,10 @@
   -webkit-transition-property: $property
   -o-transition-property: $property
   transition-property: $property
-  -moz-transition-duration: $time 
-  -webkit-transition-duration: $time 
-  -o-transition-duration: $time 
-  transition-duration: $time 
+  -moz-transition-duration: $time
+  -webkit-transition-duration: $time
+  -o-transition-duration: $time
+  transition-duration: $time
   -moz-transition-timing-function: $function
   -webkit-transition-timing-function: $function
   -o-transition-timing-function: $function
@@ -277,7 +277,7 @@ header
   width: $site-width
   padding-bottom: $footer-height
   .blog-post
-    width: $site-width - 20px - 250px
+    width: $site-width - 20px
     border-bottom: 2px solid $hr-color
     padding-top: 20px
     padding-bottom: 40px
@@ -297,7 +297,7 @@ header
       margin-right: 0
   .right-split
     float: left
-    width: $site-width - 250px - 25px - 125px - 20px - 20px
+    width: $site-width - 25px - 125px - 20px - 20px
     margin-right: 25px
 
 h1 a
@@ -311,7 +311,7 @@ h1 a
 
 .left-column
   float: left
-  width: $site-width - 250px
+  width: $site-width
 
 .right-column
   float: left
@@ -338,7 +338,7 @@ article a
 
 .projects
   margin-top: 30px
-  width: $site-width - 250px
+  width: $site-width
   .project
     margin-right: 15px
     padding-top: 20px
@@ -350,7 +350,7 @@ article a
       padding-right: 15px
     .description
       float: left
-      width: $site-width - 300px - 250px - 15px
+      width: $site-width - 300px - 15px
       //image, twitter, margins
       padding-left: 15px
     h1
@@ -378,7 +378,7 @@ article a
 
 .left-column-about
   float: left
-  width: $site-width - 270px
+  width: $site-width
   padding-right: 18px
   padding-left: 2px
   margin-top: 30px
@@ -399,7 +399,7 @@ footer
   height: $footer-height
   background: #ccc
   border-top: 2px solid darken(#cccccc, 20%)
-  margin-top: -$footer-height
+  margin-top: -$footer-height + 75px
   .col1
     width: 400px
     float: left
