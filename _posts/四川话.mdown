@@ -1,0 +1,40 @@
+# Sichuanhua Primer - 四川话方言入门
+
+## Introduction - 导言 
+
+It is assumed that you have a grasp of standard Chinese fundamentals before beginning this guide.
+
+Sichuanhua is the primary spoken language in both Sichuan and Chongqing. There are, in fact, many dialects of the Sichuan dialect. This guide will guide you in beginning to understand the fundamentals that can get you started on a large variety of them, but will focus on the Chengdu dialect.
+
+It is a primarily spoken language. The written form is the same as standard Chinese in almost all ways, but read differently.
+
+## Tones - 声调 
+
+The best place to start with Sichuanhua is to understand the tones.
+
+The great majority of words follow a simple set of rules of tone-switching from standard Chinese. Before worrying about exceptions, master the majority.
+
+    Standard Chinese -> Sichuanhua
+    1 -> 2
+    2 -> * (special tone)
+    3 -> 4
+    4 -> 3
+    5 -> 5 (neutral tone, stays the same)
+
+Before you worry about the special tone, let's take a look at some *theoretical* examples (these are *still incorrect* Sichuanhua words) of Chinese words and their Sichuanhua equivalents after tone-switching.
+
+    汉字  Standard Chinese Pinyin    Sichuanhua Pinyin
+    发烧  fa1shao1                   fa2shao2
+    知道  zhi1dao5                   zhi2dao5
+    什么  shen2me5                   shen*me5
+    上海  shang4hai3                 shang3hai4
+    天国  tian1guo2                  tian2guo*
+    雨伞  yu3san3                    yu4san4
+
+In standard Chinese, when you pronounce `雨伞`, you say `yu2san3`, not `yu3san3`, because consecutive 3rd tones in a single word aren't pronounced. In Sichuanhua, it's the same: except now it's the 4th tone. So while `气候` in standard Chinese is `qi4hou4`, in Sichuanhua it turns into `qi3hou3`, and would thusly be pronounced `qi2hou3`.
+
+## TODO list
+* Make visual graph of special tone
+* Explain text special tone
+* Make visual graph comparison of all putonghua vs sichuanhua tones
+* Explain subtle differences between putonghua vs sichuanhua tones

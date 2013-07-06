@@ -27,7 +27,7 @@
   transition-timing-function: $function
 
 $theme-color: #cd0a0a
-$site-width: 985px
+$site-width: 785px
 $hr-color: #b6b6b6
 $base-font-color: #333333
 $footer-height: 200px
@@ -67,10 +67,13 @@ header
   h1
     float: left
     font-size: 1.7em
+    a
+      //color: darken($theme-color, 10%)
+      font-weight: 500
   .links
     float: right
     font-size: 1em
-    padding-top: 10px
+    padding-top: 9px
     @include red-link
 
 nav
