@@ -1,9 +1,0 @@
----
-layout: post
-title: Srahhh.com Portfolio Site
-date: October 10, 2011
----
-
-I recently developed a portfolio site for my friend Sarah: "check it out":http://srahhh.com. She designed, I built. It's a custom theme built for WordPress, so it was primarily a PHP, jQuery, and CSS endeavor.
-
-!/img/sites/srahhh-large.png!

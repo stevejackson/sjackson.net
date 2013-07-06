@@ -37,64 +37,18 @@ $bg2-color: #434343
 $landing-width: 840px
 
 body
-  background: $bg-color
-  background-image: url("/img/bg.png")
-  background-repeat: repeat-x repeat-y
-  font-family: proxima-nova, sans-serif
+  background: white
+  font-family: "minion-pro", serif
+  font-size: 1.1em
 
-.highlightedImage
-  +borderRadius(5px)
-  +transitionAll(all, 0.2s, ease-in)
-  +boxShadow(0, 0, 0, 7px, rgba(0,0,0,.2))
-  &:hover
-    +boxShadow(0, 0, 0, 13px, rgba(0,0,0,.2))
+a
+  color: $theme-color
+  text-decoration: none
 
-#landing-content
-  width: $landing-width
-  position: relative
-  top: 160px
-  margin: 0 auto
-  height: 100%
-  p, span, div
-    text-shadow: white 0px 1px 0px
-  background-image: url("/img/bg.png")
-  background-repeat: repeat-x repeat-y
-  #left-split
-    float: left
-    width: 300px
-    border-right: 1px solid #ccc
-    padding-right: 12px
-  #right-split
-    float: left
-    width: 500px
-    padding-left: 25px
-    position: relative
-    .abovetext
-      span
-        font-size: 16px
-    h1
-      font-size: 36px
-      font-weight: bold
-      color: $theme-color
-      text-shadow: #BBB 1px 1px 4px
-    .belowtext
-      span
-        font-size: 16px
-        letter-spacing: 1px
-      padding-bottom: 25px
-    .widerule
-      width: 100%
-      margin-bottom: 25px
-    p
-      font-size: 16px
-      line-height: 1.6em
-  a.img
-    border-bottom: none
-    &:hover
-      color: none
-      background-color: transparent
-      border-bottom: none
+@mixin red-link
   a
+    color: $theme-color
+    text-decoration: none
     border-bottom: 1px dotted $theme-color
     &:hover
       color: $theme-color
@@ -103,239 +57,70 @@ body
       text-decoration: none
       text-shadow: none
 
-.networklinks a
-  margin-right: 10px
 
-p
-  -webkit-margin-before: 1em
-  -webkit-margin-after: 1em
-  -webkit-margin-start: 0px
-  -webkit-margin-end: 0px
-  line-height: 1.5em
-  margin: 0 0 12px 0
-
-div, body, p, span
-  color: $base-font-color
-  font-size: 15px
-
-#top-bar
-  width: 100%
-  height: 6px
-  background: $theme-color
-  border-bottom: 3px solid darken($theme-color, 15%)
-  z-index: -1
-
-html, body, #wrapper
-  height: 100%
-
-#wrapper
-  position: relative
-  width: $site-width
-  margin: 0 auto
-  height: auto
-  min-height: 100%
-
-#wrapper-landing
-  @extend #wrapper
-  width: $landing-width
+a.red
+  @include red-link
 
 header
-  border-bottom: 2px solid $hr-color
-  margin-bottom: 25px
-  height: 150px
-  .left-split
-    width: 125px
-    position: absolute
-    top: 80px
-    left: 0
-  .right-split
-    position: absolute
-    top: 80px
-    left: 125px
-    width: $site-width - 125px - 20px
-    margin-left: 20px
-    height: 50px
-    span
-      position: absolute
-      left: 0
-      top: 30px
-    h1 a
-      color: black
-      position: absolute
-      left: 0
-      top: 5px
-      font-weight: 700
-      font-size: 18px
-      &:hover
-        color: $theme-color
-    .icons
-      position: absolute
-      right: 0
-      top: 0
-      ul
-        list-style: none
-        position: relative
-        li
-          display: block
-          width: 48px
-          height: 48px
-          margin-left: 10px
-          overflow: hidden
-          cursor: pointer
-          float: left
-          a
-            display: block
-            width: 100%
-            height: 100%
-
-.iconcontainer
-  position: relative
-  top: -50px
-  width: 100%
-  height: 100%
-
-.github
-  background: url("/img/icons/github.png")
-
-.linkedin
-  background: url("/img/icons/linkedin-48x48.png")
-
-.twitter
-  background: url("/img/icons/twitter-48x48.png")
-
-.googleplus
-  background: url("/img/icons/g-plus-icon-48x48.png")
-
-#boxcontainer
-  width: 100%
-  height: 50px
-  padding-left: 1px
-
-#box
-  float: right
-  width: 95%
-  height: 50px
-  background: $theme-color
-  cursor: pointer
-  border: 3px solid darken($theme-color, 15%)
-  span
-    display: block
-    width: 100%
-    height: 100%
-    text-align: center
-    color: white
-    font-weight: bold
-    padding-top: 15px
-
-.opaque
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
-  filter: alpha(opacity = 50)
-  opacity: .5
-
-.navwrap
-  position: absolute
-  top: -3px
-  right: 0
-
-.navsub
-  list-style: none
-  position: relative
-  margin: 0
-  padding: 0
-  li
-    background: $theme-color
-    display: block
-    overflow: hidden
-    padding: 0
-    cursor: pointer
+  margin-top: 2em
+  margin-bottom: 0.5em
+  h1
     float: left
-    width: 100px
-    height: 40px
-    margin-right: 5px
-    border-bottom: 3px solid darken($theme-color, 15%)
-    border-left: 3px solid darken($theme-color, 15%)
-    border-right: 3px solid darken($theme-color, 15%)
+    font-size: 1.7em
+  .links
+    float: right
+    font-size: 1em
+    padding-top: 10px
+    @include red-link
 
-.navitem
-  width: 100%
-  height: 100%
-  text-align: center
+nav
+  font-size: 1.0em
+  padding-top: 10px
+  margin-bottom: 2.5em
+
   a
-    display: block
-    padding-top: 13px
-    width: 100%
-    height: 100%
-    color: white
+    color: black
     text-decoration: none
-    text-transform: uppercase
-    font-size: 13px
-    font-weight: bold
+  a:hover
+    color: lighten(black, 40%)
 
-/* post layout code
+nav span
+  padding-left: 20px
+  padding-right: 20px
 
-#content
-  width: $site-width
-  padding-bottom: $footer-height
-  .blog-post
-    width: $site-width - 20px
-    border-bottom: 2px solid $hr-color
-    padding-top: 20px
-    padding-bottom: 40px
-    margin-right: 20px
-  .left-split
-    float: left
-    width: 125px
-    text-align: right
-    padding-right: 20px
-    color: #7a7a7a
-    .date
-      border-right: 1px solid $hr-color
-      font-size: 14px
-      float: right
-      padding: 5px 15px 9px 0
-      margin-top: 10px
-      margin-right: 0
-  .right-split
-    float: left
-    width: $site-width - 25px - 125px - 20px - 20px
-    margin-right: 25px
+nav span.first
+  padding-left: 0
 
-h1 a
-  color: black
-  font-weight: 300
-  font-size: 36px
-  padding-bottom: 20px
-  display: block
-  &:hover
-    color: $theme-color
+h1
+  font-size: 1.2em
+h2
+  font-size: 1.1em
+h3
+  font-size: 1.0em
 
-.left-column
-  float: left
+div.wrapper
+  margin: 0 auto
   width: $site-width
 
-.right-column
+div.rule
+  border-top: 1px dashed lighten(black, 75%)
+  height: 1px
+  width: 100%
+
+
+div.content
+  margin-top: 2em
+
+div.landing-left-image
   float: left
-  width: 250px
-  margin-top: 30px
-  margin-bottom: 30px
-  #tweet
-    background: #f5f5f5
-    border: 3px solid darken(#f5f5f5, 10%)
-    padding: 10px
-  .twitterbutton
-    text-align: center
 
-article a
-  border-bottom: 1px dotted $theme-color
-  &:hover
-    color: $theme-color
-    background-color: lighten($theme-color, 40%)
-    border-bottom: 1px solid $theme-color
-    text-decoration: none
+div.landing-right
+  float: left
+  margin-left: 50px
+  margin-top: 15px
+  width: 60%
 
-/********************
- * Projects page
-
+/***** projects ******/
 .projects
   margin-top: 30px
   width: $site-width
@@ -353,6 +138,13 @@ article a
       width: $site-width - 300px - 15px
       //image, twitter, margins
       padding-left: 15px
+      .made-with
+        margin-bottom: 20px
+      .header
+        padding-bottom: 20px
+        .project-title
+          font-size: 1.1em
+          font-weight: 700
     h1
       padding-bottom: 10px
       font-size: 20px
@@ -374,75 +166,12 @@ article a
       text-decoration: none
       text-shadow: none
 
-/** about page *****
-
-.left-column-about
-  float: left
-  width: $site-width
-  padding-right: 18px
-  padding-left: 2px
-  margin-top: 30px
-  img
-    float: right
-    margin: 0 20px 0 20px
-  em
-    font-weight: bold
-    font-style: normal
-
-/*******************
-
-footer
-  clear: both
-  z-index: 10
-  position: relative
-  top: -3px
-  height: $footer-height
-  background: #ccc
-  border-top: 2px solid darken(#cccccc, 20%)
-  margin-top: -$footer-height + 75px
-  .col1
-    width: 400px
-    float: left
-  .col2
-    width: $site-width
-    text-align: center
-
-#footercontent
-  width: $site-width
-  padding-top: 30px
-  margin: 0 auto
-
-a
-  color: $theme-color
-  text-decoration: none
-
-a:hover
-  //text-decoration: underline;
-
-\::-webkit-selection, ::-moz-selection, ::selection
-  background: $theme-color
-  color: #fff
-  text-shadow: none
-
-a:link
-  -webkit-tap-highlight-color: $theme-color
-
-ins
-  background-color: $theme-color
-  color: #000
-  text-decoration: none
-
-mark
-  background-color: $theme-color
-  color: #000
-  font-style: italic
-  font-weight: bold
-
 .clear
   clear: both
 
-pre
-  white-space: pre-wrap
-
-.selfpic
-  width: 275px
+.highlightedImage
+  +borderRadius(5px)
+  +transitionAll(all, 0.2s, ease-in)
+  +boxShadow(0, 0, 0, 7px, rgba(0,0,0,.2))
+  &:hover
+    +boxShadow(0, 0, 0, 13px, rgba(0,0,0,.2))
