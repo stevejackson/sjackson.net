@@ -1,0 +1,13 @@
+task :default => :server
+
+task :deploy_staging do
+      sh %{rsync -avz --delete --exclude '.git' _site/ magellan:/srv/sjackson.net/staging/public_html}
+end
+
+task :deploy_live do
+      sh %{rsync -avz --delete _site/ magellan:/my/dir/to/live/ --exclude '.git' }
+end
+
+task :server do
+      sh %x{jekyll serve}
+end

@@ -1,9 +1,2 @@
-*.swp
-/_site/*
-/bin/*
-/.sass-cache/*
-/css/.sass-cache/*
-/css/layout.css
-/rakefile
-.rvmrc
-/rakefile
+_site
+.sass-cache
