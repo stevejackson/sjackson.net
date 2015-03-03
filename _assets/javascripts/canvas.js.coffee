@@ -13,10 +13,10 @@ class World
     @updateCanvasSize()
 
     @stage = new createjs.Stage('effect_canvas')
-    @stage.alpha = 0.5
+    @stage.alpha = 0.9
 
     @connectors = []
-    for i in [1..150]
+    for i in [1..120]
       connector = new Connector(@stage)
       @connectors.push connector
 
@@ -130,7 +130,7 @@ class Connector
 
     # if "layer" is 1, then it's far in background, and also moves relatively slow
     @shape.radius = layer
-    @speed = layer
+    @speed = layer * 1.5
 
     # @shape.radius = randomNum(2, 2)
     # @speed = randomFloat(1.5, 3)
@@ -151,7 +151,7 @@ class Connector
     # color connector based on if it has any connections
     if @lines? and @lines.length > 0 # has connections
       @color = 'rgba(211, 111, 111, 1)'
-    else
+    else # not connected
       @color = 'rgba(0, 0, 0, 1)'
     @redrawShape()
 

@@ -38,8 +38,8 @@ header .uppermost_row {
     margin-top: 35px;
 
     a, a:visited {
-      //color: $theme-base-color;
       color: #5a5a5a;
+      color: lighten($color-theme-secondary, 10%);
       font-size: 2em;
       border-bottom: none;
       font-weight: 400;
@@ -64,12 +64,12 @@ header .uppermost_row {
 header #centerpiece  {
   @include outer-container;
 
-  padding-top: 100px;
+  padding-top: 190px;
 
   margin: 0 auto;
   text-align: center;
 
-  min-height: 350px;
+  min-height: 500px;
 
   .slogan_header {
     @include span-columns(12);
@@ -77,11 +77,12 @@ header #centerpiece  {
 
     font-size: 2em;
     font-weight: 300;
-    color: black;//$theme-base-color;
+    color: black;
   }
   .subslogan {
     @include span-columns(12);
     margin-bottom: 24px;
+    color: black;
   }
   .buttons {
     @include span-columns(12);
@@ -93,17 +94,26 @@ header #centerpiece  {
 }
 
 section#features_row_1 {
-  @include outer-container;
-  margin-top: 150px;
-
-  background-color: $base-background-color;
   width: 100%;
-  min-height: 500px;
+  background:
+    radial-gradient(
+      lighten($color-theme-secondary, 10%),
+      $color-theme-secondary);
 
-  padding: 40px;
+  div#wrapper {
+    @include outer-container;
+    margin-top: 150px;
 
-  .feature {
-    @include span-columns(4);
+    width: 100%;
+    min-height: 300px;
+
+    padding: 40px;
+
+    color: white;
+
+    .feature {
+      @include span-columns(4);
+    }
   }
 }
 
