@@ -6,6 +6,7 @@
 
 body {
   font-family: $base-font-family;
+  margin: 0;
 }
 
 canvas#effect_canvas {
@@ -23,8 +24,13 @@ canvas#effect_canvas {
   margin: 0;
 }
 
+header {
+  @include clearfix;
+}
+
 header .uppermost_row {
   @include outer-container;
+  @include clearfix;
 
   .logo {
     @include span-columns(12);
@@ -58,10 +64,12 @@ header .uppermost_row {
 header #centerpiece  {
   @include outer-container;
 
-  padding-top: 250px;
+  padding-top: 100px;
 
   margin: 0 auto;
   text-align: center;
+
+  min-height: 350px;
 
   .slogan_header {
     @include span-columns(12);
@@ -82,5 +90,20 @@ header #centerpiece  {
     }
   }
 
+}
+
+section#features_row_1 {
+  @include outer-container;
+  margin-top: 150px;
+
+  background-color: $base-background-color;
+  width: 100%;
+  min-height: 500px;
+
+  padding: 40px;
+
+  .feature {
+    @include span-columns(4);
+  }
 }
 
