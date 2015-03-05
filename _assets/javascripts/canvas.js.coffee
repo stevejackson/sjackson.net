@@ -16,7 +16,7 @@ class World
     @stage.alpha = 0.9
 
     @connectors = []
-    for i in [1..120]
+    for i in [1..125]
       connector = new Connector(@stage)
       @connectors.push connector
 
@@ -42,7 +42,7 @@ class World
     @updateCanvasSize()
     @stage.sortChildren(@sortByZ)
     @stage.update()
-    if false
+    if true
       @txt.text = "FPS: " + createjs.Ticker.getMeasuredFPS()
       # @txt.text += "\nConnector 0: [" + @connectors[0].shape.x + ", " + @connectors[0].shape.y + "]"
       # @txt.text += "\nConnector 1: [" + @connectors[1].shape.x + ", " + @connectors[1].shape.y + "]"
@@ -76,6 +76,8 @@ class Line
 
   clear: ->
     @shape.graphics.clear()
+    @connector1.nearOther = false
+    @connector2.nearOther = false
     @stage.removeChild(@shape)
 
   redrawShape: ->
@@ -94,12 +96,23 @@ class Connector
     @shape = new createjs.Shape()
     @regenerateConnector()
 
+  hasLineTo: (connector) ->
+    for line in @lines
+      if line.connector2 == connector
+        return true
+
+    return false
+
   makeLineTo: (stage, otherConnector) ->
     # only make this line if it doesn't exist already for this connection
     exists = false
-    for line in @lines
-      if line.connector2 == otherConnector
-        exists = true
+    if @hasLineTo(otherConnector)
+      exists = true
+
+    # check if otherConnector already has a line for this
+    if otherConnector.hasLineTo(this)
+      exists = true
+      @nearOther = true
 
     if not exists
       line = new Line(stage, this, otherConnector)
@@ -126,11 +139,11 @@ class Connector
     @shape.x = randomNum(0, @stage.canvas.width)
     @shape.y = randomNum(0, @stage.canvas.height)
 
-    layer = randomNum(1, 3)
+    layer = randomFloat(1, 3)
 
     # if "layer" is 1, then it's far in background, and also moves relatively slow
     @shape.radius = layer
-    @speed = layer * 1.5
+    @speed = layer * 1.3
 
     # @shape.radius = randomNum(2, 2)
     # @speed = randomFloat(1.5, 3)
@@ -149,10 +162,10 @@ class Connector
 
   checkNearOther: ->
     # color connector based on if it has any connections
-    if @lines? and @lines.length > 0 # has connections
+    if (@lines? and @lines.length > 0) or (@nearOther) # has connections
       @color = 'rgba(211, 111, 111, 1)'
     else # not connected
-      @color = 'rgba(0, 0, 0, 1)'
+      @color = 'rgba(211, 111, 111, 1)'
     @redrawShape()
 
   checkLostConnections: (distanceOfLineDrawing) ->
