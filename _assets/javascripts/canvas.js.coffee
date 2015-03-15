@@ -3,6 +3,9 @@ randomNum = (min, max)  ->
 randomFloat = (min, max)  ->
    Math.random() * (max - min) + min
 
+clamp = (min, max, input) ->
+  Math.min(Math.max(input, min), max)
+
 distance2D = (x1, y1, x2, y2) ->
   x = x1 - x2
   y = y1 - y2
@@ -11,12 +14,19 @@ distance2D = (x1, y1, x2, y2) ->
 class World
   constructor: ->
     @updateCanvasSize()
+    @resetStage()
 
+  resetStage: ->
     @stage = new createjs.Stage('effect_canvas')
     @stage.alpha = 0.9
+    @updateCanvasSize()
+
+    numberOfConnectors =  @stage.canvas.width / 15.0
+    numberOfConnectors = clamp(10, 100, numberOfConnectors)
+    numberOfConnectors = Math.floor(numberOfConnectors)
 
     @connectors = []
-    for i in [1..125]
+    for i in [1..numberOfConnectors]
       connector = new Connector(@stage)
       @connectors.push connector
 
@@ -34,15 +44,28 @@ class World
     a.zIndex - b.zIndex
 
   updateCanvasSize: ->
+    # w = window.innerWidth
+    # h = window.innerHeight
+    # w = $('#effect_canvas').width()
+    # h = $('header').height()
+
+    # ow = 1000
+    # oh = 1000
+
+    # scale = Math.min(w / ow, h / oh)
+    # @stage.scaleX = w
+    # @stage.scaleY = h
+
     canvas = $('#effect_canvas')[0]
+
     canvas.width = $('#effect_canvas').width()
     canvas.height = $('#effect_canvas').height()
 
   render: ->
     @updateCanvasSize()
-    @stage.sortChildren(@sortByZ)
+    #@stage.sortChildren(@sortByZ)
     @stage.update()
-    if true
+    if false
       @txt.text = "FPS: " + createjs.Ticker.getMeasuredFPS()
       # @txt.text += "\nConnector 0: [" + @connectors[0].shape.x + ", " + @connectors[0].shape.y + "]"
       # @txt.text += "\nConnector 1: [" + @connectors[1].shape.x + ", " + @connectors[1].shape.y + "]"
@@ -128,9 +151,9 @@ class Connector
 
   checkOutsideBoundaries: ->
     padding = 25 # how far offscreen before deletion?
-    if (@shape.x < 0 - padding) or
+    if (@shape.x < -25) or
     (@shape.x > @stage.canvas.width + padding) or
-    (@shape.y < 0 - padding) or
+    (@shape.y < -25) or
     (@shape.y > @stage.canvas.height + padding)
       @regenerateConnector()
 
@@ -202,6 +225,9 @@ $ ->
   logicLoop = (event) ->
     if(!event.paused)
       world.render()
+
+  $(window).resize ->
+    world.resetStage()
 
   createjs.Ticker.setFPS(23);
   createjs.Ticker.addEventListener("tick", logicLoop)

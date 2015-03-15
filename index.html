@@ -19,38 +19,123 @@ layout: empty
       Modern web development
     </div>
     <div class="subslogan">
-      Straightforward web development from start to finish.
+    Straightforward web app development and problem solving, from start to finish.
     </div>
 
     <div class="buttons">
-      <input type="button" value="See more" />
+      <input type="button" value="See more" id="see_more" />
       <input type="button" value="Contact me" />
     </div>
   </section>
 
 </header>
 
-<section id='features_row_1'>
-  <div id="wrapper">
-    <div class="feature">
-      <h3>Blah</h3>
-      <p>
-        Blah blah blah blah blah
-      </p>
-    </div>
+<main>
+  <section id='features_row_1'>
+    <div class="wrapper">
 
-    <div class="feature">
-      <h3>Blah</h3>
-      <p>
-        Blah blah blah blah blah
-      </p>
-    </div>
+      <div class="content">
 
-    <div class="feature">
-      <h3>Blah</h3>
-      <p>
-        Blah blah blah blah blah
-      </p>
+        <span class="text">
+          I'm Steve, and I'm from Indiana, USA. I've been coding in Ruby on Rails for several years professionally, and in other languages as a hobbyist for many more. I enjoy reading, travelling, and learning languages. I spend a lot of my time living in Sichuan, China and practicing Chinese.
+        </span>
+
+      </div>
+
     </div>
   </section>
-</div>
+
+  <section id="portfolio_header">
+    <div class="wrapper">
+      <h2 class="portfolio">
+        Personal Projects
+      </h2>
+    </div>
+  </section>
+
+  <section id='portfolio_entry_1' class="portfolio_entry">
+    <div class="wrapper">
+      <div class="left display">
+        <video preload muted autoplay loop controls poster="{% asset_path 'transparent.png' %}">
+          <source src="/videos/mazery_small.webm" type="video/webm" />
+          <source src="/videos/mazery_small.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="right description">
+        <h3>Mazery</h3>
+
+        <p>
+          A maze generation visualizer written to jump into CoffeeScript and play around with HTML5 Canvas.
+        </p>
+
+        <p>
+          <strong>Made with: </strong>
+          <em>HTML5, Javascript/CoffeeScript, jQuery, Compass</em>
+        </p>
+
+        <p>
+          <a href="http://mazery.sjackson.net">Visit site</a>
+          <br>
+          <a href="https://github.com/stevejackson/mazery">Open Source on Github</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id='portfolio_entry_2' class="portfolio_entry">
+    <div class="wrapper">
+
+      <div class="left description">
+        <h3>Immerser</h3>
+        <p>
+          Immerser is web app to aid with every aspect of reading Chinese. It helps you track your vocabulary, and uses its knowledge of your vocabulary to recommend reading material appropriate for your reading level.
+        </p>
+
+        <p>
+          <strong>Made with: </strong>
+          <em>Ruby, Rails, RSpec, Postgres, jQuery</em>
+        </p>
+      </div>
+
+      <div class="right display">
+        <a href="{% asset_path 'immerser-large.png' %}" data-lightbox="image-1">
+          <image src="{% asset_path 'immerser-small.png' %}" />
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id='portfolio_entry_3' class="portfolio_entry">
+    <div class="wrapper">
+      <div class="left display">
+        <video loop muted autoplay poster="{% asset_path 'transparent.png' %}" class="chinesedictator" controls>
+          <source src="/videos/chinesedictator_small.webm" type="video/webm" />
+          <source src="/videos/chinesedictator_small.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="right description">
+        <h3>Chinese Dictator</h3>
+        <p>
+          A tool to help overcome a specific challenge for learners of Mandarin Chinese: listening skills. The syllables and tones don't match what we're used to, and it takes practice to be able to differentiate them. It even allows you to filter data by troubling syllable initials/finals, such as 'q' and 'ch'. Audio data is scraped from ChinesePod.
+        </p>
+
+        <p>
+          <strong>Made with: </strong>
+          <em>Ruby, Rails, Heroku, HTML5/CSS3/jQuery, HAML/SASS</em>
+        </p>
+
+        <p>
+          <a href="http://chinesedictator.sjackson.net">Visit site</a>
+          <br>
+          <a href="https://github.com/stevejackson/chinesedictator">Open Source on Github</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+</main>
