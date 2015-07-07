@@ -24,7 +24,7 @@ layout: empty
 
     <div class="buttons">
       <input type="button" value="See more" id="see_more" />
-      <input type="button" value="Contact me" />
+      <input type="button" value="Contact me" id="contact_me" />
     </div>
   </section>
 
@@ -45,9 +45,9 @@ layout: empty
     </div>
   </section>
 
-  <section id="portfolio_header">
+  <section id="portfolio_header" class="header_text">
     <div class="wrapper">
-      <h2 class="portfolio">
+      <h2>
         Personal Projects
       </h2>
     </div>
@@ -55,53 +55,65 @@ layout: empty
 
   <section id='portfolio_entry_1' class="portfolio_entry">
     <div class="wrapper">
-      <div class="left display">
-        <video preload muted autoplay loop controls poster="{% asset_path 'transparent.png' %}">
-          <source src="/videos/mazery_small.webm" type="video/webm" />
-          <source src="/videos/mazery_small.mp4" type="video/mp4" />
-        </video>
+
+      <div class="left">
+        <div class="display">
+          <video preload muted autoplay loop controls poster="{% asset_path 'transparent.png' %}" class="mazery">
+            <source src="/videos/mazery_small.webm" type="video/webm" />
+            <source src="/videos/mazery_small.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
 
-      <div class="right description">
-        <h3>Mazery</h3>
+      <div class="right">
+        <div class="description">
+          <h3>Mazery</h3>
 
-        <p>
-          A maze generation visualizer written to jump into CoffeeScript and play around with HTML5 Canvas.
-        </p>
+          <p>
+            A maze generation visualizer written to jump into CoffeeScript and play around
+            <span class="nowrap">with HTML5 Canvas.</span>
+          </p>
 
-        <p>
-          <strong>Made with: </strong>
-          <em>HTML5, Javascript/CoffeeScript, jQuery, Compass</em>
-        </p>
+          <p>
+            <strong>Made with: </strong>
+            <em>HTML5, Javascript/CoffeeScript, jQuery, Compass</em>
+          </p>
 
-        <p>
-          <a href="http://mazery.sjackson.net">Visit site</a>
-          <br>
-          <a href="https://github.com/stevejackson/mazery">Open Source on Github</a>
-        </p>
+          <p>
+            <a href="http://mazery.sjackson.net">Visit site</a>
+            <br>
+            <a href="https://github.com/stevejackson/mazery">Open Source on Github</a>
+          </p>
+        </div>
       </div>
+
     </div>
   </section>
 
   <section id='portfolio_entry_2' class="portfolio_entry">
     <div class="wrapper">
 
-      <div class="left description">
-        <h3>Immerser</h3>
-        <p>
-          Immerser is web app to aid with every aspect of reading Chinese. It helps you track your vocabulary, and uses its knowledge of your vocabulary to recommend reading material appropriate for your reading level.
-        </p>
+      <div class="left">
+        <div class="description">
+          <h3>Immerser</h3>
+          <p>
+            Immerser is web app to aid with every aspect of reading Chinese. It helps you track your vocabulary, and uses its knowledge of your vocabulary to recommend reading material appropriate for
+            <span class="nowrap">your reading level.</span>
+          </p>
 
-        <p>
-          <strong>Made with: </strong>
-          <em>Ruby, Rails, RSpec, Postgres, jQuery</em>
-        </p>
+          <p>
+            <strong>Made with: </strong>
+            <em>Ruby, Rails, RSpec, Postgres, jQuery</em>
+          </p>
+        </div>
       </div>
 
-      <div class="right display">
-        <a href="{% asset_path 'immerser-large.png' %}" data-lightbox="image-1">
-          <image src="{% asset_path 'immerser-small.png' %}" />
-        </a>
+      <div class="right">
+        <div class="display">
+          <a href="{% asset_path 'immerser-large.png' %}" data-lightbox="image-1">
+            <image src="{% asset_path 'immerser-small.png' %}" alt="Immerser" />
+          </a>
+        </div>
       </div>
 
     </div>
@@ -109,33 +121,59 @@ layout: empty
 
   <section id='portfolio_entry_3' class="portfolio_entry">
     <div class="wrapper">
-      <div class="left display">
-        <video loop muted autoplay poster="{% asset_path 'transparent.png' %}" class="chinesedictator" controls>
-          <source src="/videos/chinesedictator_small.webm" type="video/webm" />
-          <source src="/videos/chinesedictator_small.mp4" type="video/mp4" />
-        </video>
+      <div class="left">
+        <div class="display">
+          <video loop muted autoplay poster="{% asset_path 'transparent.png' %}" class="chinesedictator" controls>
+            <source src="/videos/chinesedictator_small.webm" type="video/webm" />
+            <source src="/videos/chinesedictator_small.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
 
-      <div class="right description">
-        <h3>Chinese Dictator</h3>
-        <p>
-          A tool to help overcome a specific challenge for learners of Mandarin Chinese: listening skills. The syllables and tones don't match what we're used to, and it takes practice to be able to differentiate them. It even allows you to filter data by troubling syllable initials/finals, such as 'q' and 'ch'. Audio data is scraped from ChinesePod.
-        </p>
+      <div class="right">
+        <div class="description">
+          <h3>Chinese Dictator</h3>
+          <p class="blurb">
+            A tool to help overcome a specific challenge for learners of Mandarin Chinese: listening skills. The syllables and tones don't match what we're used to, and it takes practice to be able to differentiate them. It even allows you to filter data by troubling syllable initials/finals, such as 'q' and 'ch'. Audio data is
+            <span class="nowrap">scraped from ChinesePod.</span>
+          </p>
 
-        <p>
-          <strong>Made with: </strong>
-          <em>Ruby, Rails, Heroku, HTML5/CSS3/jQuery, HAML/SASS</em>
-        </p>
+          <p>
+            <strong>Made with: </strong>
+            <em>Ruby, Rails, Heroku, HTML5/CSS3/jQuery, HAML/SASS</em>
+          </p>
 
-        <p>
-          <a href="http://chinesedictator.sjackson.net">Visit site</a>
-          <br>
-          <a href="https://github.com/stevejackson/chinesedictator">Open Source on Github</a>
-        </p>
+          <p>
+            <a href="http://chinesedictator.sjackson.net">Visit site</a>
+            <br>
+            <a href="https://github.com/stevejackson/chinesedictator">Open Source on Github</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
+  <section id="contact_header" class="header_text">
+    <div class="wrapper">
+      <h2>
+        Contact Me
+      </h2>
+    </div>
+  </section>
 
+  <section id="contact">
+    <div class="wrapper">
+
+      <p>
+        Feel free to send me an e-mail about anything. <a href="mailto:steve@sjackson.net">steve@sjackson.net</a>
+        <br><br>
+        If you prefer to use encrypted e-mail, here is <a href="/pgpkey.txt">my PGP key.</a>
+        <br><br>
+        <a href="http://github.com/stevejackson">My Github account</a>
+      </p>
+
+    </div>
+  </section>
 
 </main>
+

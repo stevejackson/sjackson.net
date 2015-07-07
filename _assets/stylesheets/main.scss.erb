@@ -151,7 +151,7 @@ main {
   background: url(<%= asset_path 'seamless_paper_texture.jpg' %>);
 }
 
-section#portfolio_header {
+section.header_text {
   margin-top: 30px;
   margin-bottom: 25px;
 
@@ -159,7 +159,7 @@ section#portfolio_header {
     @include outer-container;
     position: relative;
 
-    .portfolio {
+    h2 {
       @include span-columns(12);
       text-align: center;
       color: $color-theme-secondary;
@@ -171,7 +171,7 @@ section#portfolio_header {
       position: relative;
     }
 
-    .portfolio:after {
+    h2:after {
       background-color: darken(tan, 1%);
       content: "";
       position: absolute;
@@ -188,7 +188,6 @@ section#portfolio_header {
 
 .portfolio_entry {
   min-height: 200px;
-  margin-bottom: 50px;
 
   .wrapper {
     @include outer-container;
@@ -206,6 +205,13 @@ section#portfolio_header {
       p {
         font-weight: 400;
       }
+
+      p.blurb {
+        orphans: 3;
+        widows: 3;
+        white-space: normal;
+      }
+
     }
 
     .display {
@@ -247,7 +253,10 @@ section#portfolio_header {
       @include media($mobile-up) {
         @include span-columns(6);
       }
+
+      margin-bottom: 50px;
       text-align: right;
+      padding: 0 10px 0 10px;
     }
 
     .right {
@@ -257,7 +266,9 @@ section#portfolio_header {
       @include media($mobile-up) {
         @include span-columns(6);
       }
-      text-align: left;
+      margin-bottom: 50px;
+      text-align: right;
+      padding: 0 10px 0 10px;
     }
   }
 }
@@ -273,4 +284,24 @@ section#portfolio_header {
       }
     }
   }
+}
+
+hr.before_about {
+  width: 50%;
+  background-color: darken(tan, 1%);
+  margin: 0 auto;
+  border: 0 none;
+  height: 1px;
+  margin-bottom: 50px;
+}
+
+section#contact {
+  @include span-columns(12);
+  @include media($mobile) {
+    @include span-columns(4);
+    padding: 0 10px 0 10px;
+  }
+
+  text-align: center;
+  padding-bottom: 100px;
 }
