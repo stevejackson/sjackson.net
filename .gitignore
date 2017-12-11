@@ -1,3 +1,6 @@
-_site
+.bundle
+.cache
+.DS_Store
 .sass-cache
-.idea/*
+build/
+.idea/**/*
