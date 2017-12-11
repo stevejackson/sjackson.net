@@ -1,0 +1,24 @@
+.hero_area {
+  text-align: center;
+
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+}
+
+.hero_child {
+  flex: auto;
+}
+
+.skills {
+  .ruby {
+    color: red;
+  }
+  .and {
+    color: black;
+  }
+  .javascript {
+    color: indigo;
+  }
+}

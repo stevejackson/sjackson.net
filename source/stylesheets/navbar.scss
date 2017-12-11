@@ -1,0 +1,10 @@
+nav {
+  display: flex;
+  //max-width: 500px;
+  background-color: aqua;
+}
+nav .nav-item {
+  display: inline-block;
+  flex: auto;
+  text-align: center;
+}
