@@ -1,24 +1,40 @@
 .hero_area {
   text-align: center;
-
   min-height: 150px;
   display: flex;
   flex-direction: column;
-  background-color: gray;
+}
+
+.name {
+  color: $color-dark-accent;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.slogan {
+  color: $color-primary;
+  font-size: 1.9rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
 .hero_child {
   flex: auto;
+  align-content: flex-end;
 }
 
 .skills {
+  font-size: 1.1rem;
+  font-weight: 300;
+
   .ruby {
-    color: red;
+    color: #AA2222;
   }
   .and {
-    color: black;
+    color: $color-dark-accent;
   }
   .javascript {
-    color: indigo;
+    color: #6F27D3;
   }
 }

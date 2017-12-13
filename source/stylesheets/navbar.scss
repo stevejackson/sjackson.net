@@ -1,10 +1,22 @@
 nav {
   display: flex;
-  //max-width: 500px;
-  background-color: aqua;
+  padding: 40px 0;
 }
+
 nav .nav-item {
   display: inline-block;
   flex: auto;
   text-align: center;
+
+  font-size: 1.3rem;
+}
+
+nav a, a:visited {
+  color: $color-dark-accent;
+  font-weight: 300;
+  padding-bottom: 3px;
+}
+
+nav a:hover {
+  border-bottom: 2px solid $color-primary;
 }
