@@ -1,6 +1,18 @@
+///// Bulma.css overrides
+
+$fullhd: 800px;
+$widescreen: 800px;
+$desktop: 800px;
+
+/////
 $color-dark-accent: #35495E;
 $color-primary: #41B883;
 
 body {
   font-family: "Source Sans Pro", sans-serif;
+  padding: 0 8px;
+}
+
+a, a:visited, a:active {
+  color: dodgerblue;
 }

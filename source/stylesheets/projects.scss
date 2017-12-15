@@ -1,0 +1,44 @@
+h2 {
+  font-size: 1.6rem;
+  color: $color-dark-accent;
+  border-bottom: 1px solid $color-dark-accent;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: $color-primary;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.project_details .project_description {
+  //flex-grow: 1;
+}
+
+.project_details .details_stretch_bottom {
+  //flex: 1 1 auto;
+}
+
+.project_thumbnail {
+  a {
+    line-height: 0;
+    padding: 0;
+    display: block;
+  }
+  img {
+    object-fit: cover;
+  }
+}
+

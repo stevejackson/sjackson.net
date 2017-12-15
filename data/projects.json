@@ -1,0 +1,11 @@
+{
+  "projects": [
+    {
+      "name": "Mazery",
+      "description": "A maze generation visualizer written to jump into CoffeeScript and play around with HTML5's Canvas.",
+      "madeWith": "Javascript, HTML Canvas",
+      "siteUrl": "https://mazery.sjackson.net",
+      "sourceCodeUrl": "https://www.github.com/stevejackson/mazery"
+    }
+  ]
+}

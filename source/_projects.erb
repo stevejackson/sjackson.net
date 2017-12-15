@@ -1,0 +1,40 @@
+<% data.projects.projects.each do |project| %>
+  <div class="column is-6">
+    <div class="project">
+      <h3><%= project.name %></h3>
+
+      <div class="project_details">
+        <div class="project_description">
+          <%= project.description %>
+        </div>
+
+        <div class="details_stretch_bottom">
+          <p>
+            <strong>Made with: </strong>
+            <emphasis>
+              <%= project.madeWith %>
+            </emphasis>
+          </p>
+
+          <p>
+            <a href="<%= project.siteUrl %>">Visit site</a>
+          </p>
+
+          <% if project.sourceCodeUrl %>
+            <p>
+              <a href="<%= project.sourceCodeUrl %>">Open source on github</a>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-6">
+    <div class="project_thumbnail">
+      <a href="/images/mazery-large.png">
+        <img src="/images/mazery-poster.png" alt="Immerser" />
+      </a>
+    </div>
+  </div>
+<% end %>

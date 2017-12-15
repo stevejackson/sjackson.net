@@ -1,4 +1,11 @@
+$tablet: 769px;
+$desktop: 800px + (2 * 32px);
+$widescreen: 800px + (2 * 32px);
+$fullhd: 800px + (2 * 32px);
+
 @import "vendor/bulma/bulma";
+
 @import "general";
 @import 'navbar';
 @import "hero";
+@import "projects";
