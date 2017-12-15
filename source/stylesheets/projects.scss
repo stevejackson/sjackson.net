@@ -14,6 +14,8 @@ h3 {
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  padding-bottom: 1rem;
 }
 
 .project_details {
@@ -21,14 +23,6 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
-}
-
-.project_details .project_description {
-  //flex-grow: 1;
-}
-
-.project_details .details_stretch_bottom {
-  //flex: 1 1 auto;
 }
 
 .project_thumbnail {

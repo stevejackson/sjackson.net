@@ -5,7 +5,24 @@
       "description": "A maze generation visualizer written to jump into CoffeeScript and play around with HTML5's Canvas.",
       "madeWith": "Javascript, HTML Canvas",
       "siteUrl": "https://mazery.sjackson.net",
-      "sourceCodeUrl": "https://www.github.com/stevejackson/mazery"
+      "sourceCodeUrl": "https://www.github.com/stevejackson/mazery",
+      "videoWebm": "/videos/mazery_small.webm",
+      "videoMp4": "/videos/mazery_small.mp4"
+    },
+    {
+      "name": "Immerser",
+      "description": "Immerser is web app to aid with every aspect of reading Chinese. It helps you track your vocabulary, and uses its knowledge of your vocabulary to recommend reading material appropriate for your reading level.",
+      "madeWith": "Ruby, Rails, Javascript",
+      "videoWebm": "/videos/immerser_small.webm",
+      "videoMp4": "/videos/immerser_small.mp4"
+    },
+    {
+      "name": "Chinese Dictator",
+      "description": "A tool to help overcome a specific challenge for learners of Mandarin Chinese: listening skills. The syllables and tones don't match what we're used to, and it takes practice to be able to differentiate them. It even allows you to filter data by troubling syllable initials/finals, such as 'q' and 'ch'. Audio data is scraped from ChinesePod.",
+      "madeWith": "Ruby, Rails, Heroku, Javascript, HAML/SASS",
+      "siteUrl": "https://chinesedictator.sjackson.net",
+      "videoWebm": "/videos/chinesedictator_small.webm",
+      "videoMp4": "/videos/chinesedictator_small.mp4"
     }
   ]
 }

@@ -1,14 +1,15 @@
 <% data.projects.projects.each do |project| %>
+<div class="columns">
   <div class="column is-6">
     <div class="project">
       <h3><%= project.name %></h3>
 
       <div class="project_details">
-        <div class="project_description">
+        <div>
           <%= project.description %>
         </div>
 
-        <div class="details_stretch_bottom">
+        <div>
           <p>
             <strong>Made with: </strong>
             <emphasis>
@@ -16,9 +17,11 @@
             </emphasis>
           </p>
 
-          <p>
-            <a href="<%= project.siteUrl %>">Visit site</a>
-          </p>
+          <% if project.siteUrl %>
+            <p>
+              <a href="<%= project.siteUrl %>">Visit site</a>
+            </p>
+          <% end %>
 
           <% if project.sourceCodeUrl %>
             <p>
@@ -32,9 +35,15 @@
 
   <div class="column is-6">
     <div class="project_thumbnail">
-      <a href="/images/mazery-large.png">
-        <img src="/images/mazery-poster.png" alt="Immerser" />
-      </a>
+      <% if project.videoWebm %>
+        <video preload muted autoplay loop controls poster="/images/transparent.png" class="mazery">
+          <source src="<%= project.videoWebm %>" type="video/webm" />
+          <source src="<%= project.videoMp4 %>" type="video/mp4" />
+        </video>
+      <% elsif project.imageThumbnail %>
+        <img src="<%= project.imageThumbnail %>" />
+      <% end %>
     </div>
   </div>
+</div>
 <% end %>
