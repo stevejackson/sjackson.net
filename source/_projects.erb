@@ -1,4 +1,4 @@
-<% data.projects.projects.each do |project| %>
+<% data.projects.projects.each_with_index do |project, idx| %>
   <div class="columns">
     <div class="column is-6">
       <div class="project">
@@ -40,8 +40,6 @@
             <source src="<%= project.videoWebm %>" type="video/webm" />
             <source src="<%= project.videoMp4 %>" type="video/mp4" />
           </video>
-        <% elsif project.imageThumbnail %>
-          <img src="<%= project.imageThumbnail %>" />
         <% end %>
       </div>
     </div>
