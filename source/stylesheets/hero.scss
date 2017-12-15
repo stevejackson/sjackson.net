@@ -1,4 +1,5 @@
 .hero_area {
+  margin: 40px 0;
   text-align: center;
   min-height: 150px;
   display: flex;
@@ -28,16 +29,19 @@
   font-size: 1.1rem;
   font-weight: 300;
 
-  .ruby {
-    color: #AA2222;
-  }
   .and {
     color: $color-dark-accent;
+  }
+  .ruby {
+    color: #AA2222;
   }
   .javascript {
     color: #6F27D3;
   }
   .ubuntu {
     color: rgb(231, 84, 45);
+  }
+  .ansible {
+    color: rgb(86, 170, 191);
   }
 }
