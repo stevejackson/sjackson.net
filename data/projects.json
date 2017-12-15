@@ -19,7 +19,7 @@
     {
       "name": "Chinese Dictator",
       "description": "A tool to help overcome a specific challenge for learners of Mandarin Chinese: listening skills. The syllables and tones don't match what we're used to, and it takes practice to be able to differentiate them. It even allows you to filter data by troubling syllable initials/finals, such as 'q' and 'ch'. Audio data is scraped from ChinesePod.",
-      "madeWith": "Ruby, Rails, Heroku, Javascript, HAML/SASS",
+      "madeWith": "Ruby, Rails, Javascript",
       "siteUrl": "https://chinesedictator.sjackson.net",
       "videoWebm": "/videos/chinesedictator_small.webm",
       "videoMp4": "/videos/chinesedictator_small.mp4"
