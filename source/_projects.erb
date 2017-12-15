@@ -1,49 +1,49 @@
 <% data.projects.projects.each do |project| %>
-<div class="columns">
-  <div class="column is-6">
-    <div class="project">
-      <h3><%= project.name %></h3>
+  <div class="columns">
+    <div class="column is-6">
+      <div class="project">
+        <h3><%= project.name %></h3>
 
-      <div class="project_details">
-        <div>
-          <%= project.description %>
-        </div>
+        <div class="project_details">
+          <div>
+            <%= project.description %>
+          </div>
 
-        <div>
-          <p>
-            <strong>Made with: </strong>
-            <emphasis>
-              <%= project.madeWith %>
-            </emphasis>
-          </p>
-
-          <% if project.siteUrl %>
+          <div>
             <p>
-              <a href="<%= project.siteUrl %>">Visit site</a>
+              <strong>Made with: </strong>
+              <emphasis>
+                <%= project.madeWith %>
+              </emphasis>
             </p>
-          <% end %>
 
-          <% if project.sourceCodeUrl %>
-            <p>
-              <a href="<%= project.sourceCodeUrl %>">Open source on github</a>
-            </p>
-          <% end %>
+            <% if project.siteUrl %>
+              <p>
+                <a href="<%= project.siteUrl %>">Visit site</a>
+              </p>
+            <% end %>
+
+            <% if project.sourceCodeUrl %>
+              <p>
+                <a href="<%= project.sourceCodeUrl %>">Open source on github</a>
+              </p>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="column is-6">
-    <div class="project_thumbnail">
-      <% if project.videoWebm %>
-        <video preload muted autoplay loop controls poster="/images/transparent.png" class="mazery">
-          <source src="<%= project.videoWebm %>" type="video/webm" />
-          <source src="<%= project.videoMp4 %>" type="video/mp4" />
-        </video>
-      <% elsif project.imageThumbnail %>
-        <img src="<%= project.imageThumbnail %>" />
-      <% end %>
+    <div class="column is-6">
+      <div class="project_thumbnail">
+        <% if project.videoWebm %>
+          <video preload muted autoplay loop controls poster="/images/transparent.png" class="mazery">
+            <source src="<%= project.videoWebm %>" type="video/webm" />
+            <source src="<%= project.videoMp4 %>" type="video/mp4" />
+          </video>
+        <% elsif project.imageThumbnail %>
+          <img src="<%= project.imageThumbnail %>" />
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 <% end %>
